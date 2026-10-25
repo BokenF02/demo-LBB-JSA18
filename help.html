@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trợ giúp - Khang Football</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Help CSS -->
+    <link rel="stylesheet" href="./CSS/help.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>    <!-- Navbar (loaded by components.js) -->
+    <div id="site-navbar"></div>
+
+
+
+    <!-- =====================================================
+         HERO + TÌM KIẾM
+    ====================================================== -->
+    <section class="help-hero">
+      <div class="container">
+        <span class="help-hero-label">HỖ TRỢ KHÁCH HÀNG</span>
+        <h1>Bạn cần giúp gì?</h1>
+        <p>
+          Tìm câu trả lời nhanh cho câu hỏi thường gặp về mua hàng,
+          vận chuyển, đổi trả và nhiều hơn nữa.
+        </p>
+
+        <div class="help-search">
+          <input
+            id="helpSearch"
+            type="text"
+            placeholder="Gõ từ khóa để tìm kiếm..."
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         DANH MỤC CÂU HỎI
+    ====================================================== -->
+    <section class="help-cats">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+
+          <!-- DANH MỤC 1 -->
+          <div class="col-6 col-md-3">
+            <div class="help-cat-card" data-cat="muahang">
+              <div class="help-cat-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+              <h3>Mua hàng</h3>
+              <span>5 câu hỏi</span>
+            </div>
+          </div>
+
+          <!-- DANH MỤC 2 -->
+          <div class="col-6 col-md-3">
+            <div class="help-cat-card" data-cat="giaohang">
+              <div class="help-cat-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <h3>Giao hàng</h3>
+              <span>4 câu hỏi</span>
+            </div>
+          </div>
+
+          <!-- DANH MỤC 3 -->
+          <div class="col-6 col-md-3">
+            <div class="help-cat-card" data-cat="doitra">
+              <div class="help-cat-icon">
+                <i class="fa-solid fa-rotate-left"></i>
+              </div>
+              <h3>Đổi trả</h3>
+              <span>4 câu hỏi</span>
+            </div>
+          </div>
+
+          <!-- DANH MỤC 4 -->
+          <div class="col-6 col-md-3">
+            <div class="help-cat-card" data-cat="taikhoan">
+              <div class="help-cat-icon">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <h3>Tài khoản</h3>
+              <span>3 câu hỏi</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+    <section id="faq" class="help-section">
+      <div class="container">
+        <div class="help-heading">
+          <span>CÂU HỎI THƯỜNG GẶP</span>
+          <h2>Có thắc mắc? Mình giải đáp ngay</h2>
+          <p>Nhấn vào câu hỏi để xem câu trả lời chi tiết</p>
+        </div>
+
+        <div class="help-faq-wrap">
+
+          <!-- EMPTY STATE -->
+          <p id="faqEmpty" style="display:none; text-align:center; color:#737d78;">
+            Không tìm thấy câu hỏi phù hợp. Hãy thử từ khóa khác!
+          </p>
+
+          <!-- ======= MUA HÀNG ======= -->
+          <div class="help-faq-item" data-cat="muahang">
+            <button class="help-faq-question">
+              <span>Làm sao để đặt hàng trên Khang Football?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Bạn chỉ cần chọn sản phẩm, chọn size, bấm "Thêm vào giỏ hàng",
+                sau đó vào giỏ hàng và nhấn "Tiến hành thanh toán". Bạn sẽ được
+                hướng dẫn đăng nhập (hoặc đăng ký) để hoàn tất đơn hàng.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="muahang">
+            <button class="help-faq-question">
+              <span>Tôi có thể thanh toán bằng cách nào?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Khang Football hỗ trợ thanh toán qua VISA, MasterCard, MoMo
+                và ZaloPay. Bạn có thể chọn phương thức phù hợp khi thanh toán.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="muahang">
+            <button class="help-faq-question">
+              <span>Mã giảm giá hoạt động như thế nào?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Nhập mã giảm giá vào ô "Mã giảm giá" trong giỏ hàng và bấm
+                "Áp dụng". Mã "KHANG10" sẽ giảm 10% cho đơn hàng của bạn.
+                Ngoài ra, tham gia trò chơi Quiz để nhận thêm mã giảm giá!
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="muahang">
+            <button class="help-faq-question">
+              <span>Sản phẩm có chính hãng không?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Tất cả sản phẩm tại Khang Football đều là hàng chính hãng,
+                được nhập khẩu trực tiếp từ các thương hiệu Nike, Adidas,
+                Puma và Mizuno.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="muahang">
+            <button class="help-faq-question">
+              <span>Làm sao chọn size giày phù hợp?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Bạn có thể tham khảo bảng size giày ở phần dưới trang này.
+                Nếu vẫn phân vân, hãy liên hệ hotline 0907 427 169 để được
+                tư vấn chi tiết.
+              </p>
+            </div>
+          </div>
+
+          <!-- ======= GIAO HÀNG ======= -->
+          <div class="help-faq-item" data-cat="giaohang">
+            <button class="help-faq-question">
+              <span>Thời gian giao hàng là bao lâu?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Với shipping "Nhanh", đơn hàng sẽ được giao trong 2-3 ngày
+                làm việc. Với shipping "Tiết kiệm", thời gian là 5-7 ngày
+                làm việc tùy khu vực.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="giaohang">
+            <button class="help-faq-question">
+              <span>Phí vận chuyển là bao nhiêu?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Phí vận chuyển "Tiết kiệm" là 30.000đ, "Nhanh" là 50.000đ.
+                Đơn từ 2.000.000đ trở lên được miễn phí vận chuyển.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="giaohang">
+            <button class="help-faq-question">
+              <span>Tôi có thể theo dõi đơn hàng không?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Sau khi đặt hàng thành công, bạn sẽ nhận email xác nhận
+                kèm mã vận đơn. Bạn có thể dùng mã này để theo dõi
+                trạng thái đơn hàng.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="giaohang">
+            <button class="help-faq-question">
+              <span>Giao hàng có kiểm tra trước khi nhận không?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Có! Bạn được quyền kiểm tra hàng trước khi thanh toán.
+                Nếu sản phẩm không đúng mô tả, bạn có thể từ chối nhận
+                hàng mà không mất phí.
+              </p>
+            </div>
+          </div>
+
+          <!-- ======= ĐỔI TRẢ ======= -->
+          <div class="help-faq-item" data-cat="doitra">
+            <button class="help-faq-question">
+              <span>Chính sách đổi trả như thế nào?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Bạn có thể đổi trả trong vòng 7 ngày kể từ ngày nhận hàng.
+                Sản phẩm phải còn nguyên tem, chưa qua sử dụng và có hóa đơn
+                mua hàng.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="doitra">
+            <button class="help-faq-question">
+              <span>Đổi size giày có được không?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Có! Bạn có thể đổi size trong vòng 7 ngày. Sản phẩm phải
+                còn nguyên trạng, chưa đi thử ngoài và còn tem nhãn.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="doitra">
+            <button class="help-faq-question">
+              <span>Nếu nhận hàng bị hư hỏng thì sao?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Nếu sản phẩm bị hư hỏng trong quá trình vận chuyển, hãy
+                liên hệ hotline 0907 427 169 hoặc email dangbaokhang57@gmail.com
+                trong vòng 24 giờ để được hỗ trợ đổi trả miễn phí.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="doitra">
+            <button class="help-faq-question">
+              <span>Bao lâu nhận được tiền hoàn?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Sau khi chấp nhận đổi trả, tiền hoàn sẽ được chuyển trong
+                3-5 ngày làm việc tùy phương thức thanh toán ban đầu.
+              </p>
+            </div>
+          </div>
+
+          <!-- ======= TÀI KHOẢN ======= -->
+          <div class="help-faq-item" data-cat="taikhoan">
+            <button class="help-faq-question">
+              <span>Làm sao tạo tài khoản?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Nhấn nút "Đăng ký" ở thanh điều hướng, điền tên, email
+                và mật khẩu. Bạn cũng có thể đăng ký nhanh qua Google
+                hoặc Facebook.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="taikhoan">
+            <button class="help-faq-question">
+              <span>Quên mật khẩu thì làm sao?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Ở trang đăng nhập, nhấn "Quên mật khẩu" và nhập email
+                đã đăng ký. Bạn sẽ nhận email hướng dẫn đặt lại mật khẩu
+                trong vài phút.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-faq-item" data-cat="taikhoan">
+            <button class="help-faq-question">
+              <span>Thông tin cá nhân có được bảo mật?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="help-faq-answer">
+              <p>
+                Có! Khang Football cam kết bảo mật thông tin cá nhân
+                của bạn 100%. Chúng tôi không chia sẻ dữ liệu với bên
+                thứ ba khi chưa có sự đồng ý.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         BẢNG SIZE GIÀY
+    ====================================================== -->
+    <section class="help-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="help-heading">
+          <span>BẢNG SIZE</span>
+          <h2>Biểu đồ size giày bóng đá</h2>
+          <p>Đo chiều dài bàn chân và đối chiếu với bảng dưới đây</p>
+        </div>
+
+        <div class="size-table-wrap" style="max-width: 860px; margin: 0 auto;">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Size (VN)</th>
+                <th>Size (EU)</th>
+                <th>Chiều dài chân (cm)</th>
+                <th>Gợi ý</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="size-highlight">39</td>
+                <td>39</td>
+                <td>24.5 – 25.0</td>
+                <td>Phù hợp chân nhỏ</td>
+              </tr>
+              <tr>
+                <td class="size-highlight">40</td>
+                <td>40</td>
+                <td>25.0 – 25.5</td>
+                <td>Phổ biến nhất</td>
+              </tr>
+              <tr>
+                <td class="size-highlight">41</td>
+                <td>41</td>
+                <td>25.5 – 26.5</td>
+                <td>Trung bình</td>
+              </tr>
+              <tr>
+                <td class="size-highlight">42</td>
+                <td>42</td>
+                <td>26.5 – 27.5</td>
+                <td>Rộng hơn một chút</td>
+              </tr>
+              <tr>
+                <td class="size-highlight">43</td>
+                <td>43</td>
+                <td>27.5 – 28.0</td>
+                <td>Chân lớn</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         LIÊN HỆ TRỰC TIẾP
+    ====================================================== -->
+    <section class="help-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="help-heading">
+          <span>LIÊN HỆ</span>
+          <h2>Vẫn chưa tìm thấy câu trả lời?</h2>
+          <p>Đội ngũ hỗ trợ của Khang Football luôn sẵn sàng giúp bạn</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- HOTLINE -->
+          <div class="col-md-4">
+            <div class="help-contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <h3>Hotline</h3>
+              <p>Gọi ngay 0907 427 169<br />Hỗ trợ 8:00 – 21:00 hàng ngày</p>
+              <a href="tel:0907427169" class="contact-btn">Gọi ngay</a>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="col-md-4">
+            <div class="help-contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+              <p>Gửi câu hỏi đến<br />dangbaokhang57@gmail.com</p>
+              <a href="mailto:dangbaokhang57@gmail.com" class="contact-btn">Gửi email</a>
+            </div>
+          </div>
+
+          <!-- FANPAGE -->
+          <div class="col-md-4">
+            <div class="help-contact-card">
+              <div class="contact-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <h3>Fanpage Facebook</h3>
+              <p>Nhắn tin trực tiếp qua<br />Fanpage Khang Football</p>
+              <a href="#" class="contact-btn">Nhắn tin</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <!-- Footer (loaded by components.js) -->
+    <div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./JS/components.js"></script>
+<script src="./JS/script.js"></script>
+<script src="./JS/help.js"></script>
+
+  </body>
+</html>

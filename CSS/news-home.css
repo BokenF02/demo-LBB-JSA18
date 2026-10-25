@@ -1,0 +1,827 @@
+/* =========================================================
+   KHANG FOOTBALL - NEWS HOME
+   Trang chủ tin tức bóng đá
+   Màu chủ đạo: #95D5B2
+========================================================= */
+
+
+:root {
+
+    --green-main: #84AE92;
+
+    --green-dark: #5A827E;
+
+    --green-light: #95D5B2;
+
+    --green-soft: #B9D4AA;
+
+    --cream: #FAFFCA;
+
+    --text-main: #1d2521;
+
+    --text-gray: #737d78;
+
+    --border: #dfe7e2;
+
+    --light-bg: #f5f8f6;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 10px 30px rgba(27, 53, 42, 0.10);
+
+}
+
+
+/* =========================================================
+   HERO / BREADCRUMB
+========================================================= */
+
+.news-hero {
+
+    position: relative;
+
+    padding: 90px 0;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #95D5B2 0%,
+            #5A827E 60%,
+            #2d4a41 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.news-hero::after {
+
+    content: "⚽";
+
+    position: absolute;
+
+    right: -30px;
+    bottom: -40px;
+
+    font-size: 190px;
+
+    opacity: 0.12;
+
+    transform: rotate(-15deg);
+}
+
+
+.news-hero-label {
+
+    display: inline-block;
+
+    padding: 6px 18px;
+
+    margin-bottom: 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.news-hero h1 {
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+.news-hero h1 span {
+
+    color: var(--cream);
+}
+
+
+.news-hero p {
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TIN NỔI BẬT (TICKER)
+========================================================= */
+
+.news-ticker {
+
+    background: var(--green-dark);
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    padding: 12px 0;
+}
+
+
+.news-ticker-track {
+
+    display: inline-block;
+
+    padding-left: 100%;
+
+    animation: news-ticker 30s linear infinite;
+}
+
+
+.news-ticker-track span {
+
+    margin-right: 50px;
+
+    font-size: 13px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.news-ticker-track i {
+
+    color: var(--cream);
+
+    margin-right: 6px;
+}
+
+
+@keyframes news-ticker {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.news-section {
+
+    padding: 70px 0;
+}
+
+
+.news-section .news-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.news-heading span {
+
+    color: var(--green-main);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.news-heading h2 {
+
+    margin: 8px 0 10px;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    color: var(--text-main);
+}
+
+
+.news-heading p {
+
+    color: var(--text-gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TRẬN ĐẤU NỔI BẬT (MATCH CARDS)
+========================================================= */
+
+.match-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 26px 20px;
+
+    height: 100%;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.match-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 36px rgba(27, 53, 42, 0.16);
+}
+
+
+.match-stage {
+
+    display: inline-block;
+
+    padding: 4px 14px;
+
+    margin-bottom: 16px;
+
+    border-radius: 20px;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.match-teams {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.match-team {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.match-team img {
+
+    width: 96px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+.match-team strong {
+
+    font-size: 13px;
+
+    color: var(--text-main);
+}
+
+
+.match-score {
+
+    min-width: 52px;
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    color: var(--green-dark);
+}
+
+
+.match-date {
+
+    color: var(--text-gray);
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+.match-date i {
+
+    margin-right: 5px;
+
+    color: var(--green-main);
+}
+
+
+/* =========================================================
+   TIN TỨC MỚI NHẤT (NEWS CARDS)
+========================================================= */
+
+.news-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    height: 100%;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.news-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 36px rgba(27, 53, 42, 0.16);
+}
+
+
+.news-card-image {
+
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+}
+
+
+.news-card-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #f0f0f0;
+
+    transition: transform 0.4s ease;
+}
+
+
+.news-card:hover .news-card-image img {
+
+    transform: scale(1.07);
+}
+
+
+.news-card-tag {
+
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    padding: 5px 14px;
+
+    border-radius: 20px;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.news-card-body {
+
+    padding: 20px;
+}
+
+
+.news-card-meta {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin-bottom: 10px;
+
+    color: var(--text-gray);
+
+    font-size: 12px;
+}
+
+
+.news-card-meta i {
+
+    color: var(--green-main);
+
+    margin-right: 4px;
+}
+
+
+.news-card-body h3 {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    color: var(--text-main);
+
+    margin-bottom: 10px;
+
+    transition: color 0.3s ease;
+}
+
+
+.news-card-body h3 a:hover {
+
+    color: var(--green-dark);
+}
+
+
+.news-card-body p {
+
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VIDEO NỔI BẬT
+========================================================= */
+
+.video-card {
+
+    position: relative;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    height: 100%;
+
+    box-shadow: var(--shadow);
+}
+
+
+.video-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: contain;
+
+    background: #1a1a1a;
+
+    display: block;
+}
+
+
+.video-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 22, 0) 40%,
+        rgba(17, 24, 22, 0.85) 100%
+    );
+}
+
+
+.video-play {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green-light);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+
+.video-card:hover .video-play {
+
+    transform: translate(-50%, -50%) scale(1.12);
+
+    background: var(--green-dark);
+}
+
+
+.video-title {
+
+    position: absolute;
+
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+.video-time {
+
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    z-index: 2;
+
+    padding: 4px 10px;
+
+    border-radius: 6px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CTA WORLD CUP
+========================================================= */
+
+.wc-banner {
+
+    position: relative;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding: 50px 40px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            120deg,
+            #95D5B2 0%,
+            #5A827E 100%
+        );
+
+    box-shadow: var(--shadow);
+}
+
+
+.wc-banner h3 {
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+
+.wc-banner p {
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.wc-banner .wc-btn {
+
+    display: inline-block;
+
+    padding: 12px 28px;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    color: var(--green-dark);
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.wc-banner .wc-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+
+.wc-banner img {
+
+    position: absolute;
+
+    right: 40px;
+    bottom: -25px;
+
+    width: 200px;
+
+    opacity: 0.9;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode .news-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2d4a41 0%,
+            #16211d 100%
+        );
+}
+
+
+body.dark-mode .match-card,
+body.dark-mode .news-card {
+
+    background: #1b2420;
+
+    border-color: #2c3a34;
+}
+
+
+body.dark-mode .match-card .match-team strong,
+body.dark-mode .news-card-body h3 {
+
+    color: #eeeeee;
+}
+
+
+body.dark-mode .match-card .match-score {
+
+    color: var(--green-light);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .news-hero h1 {
+
+        font-size: 30px;
+    }
+
+
+    .news-hero {
+
+        padding: 60px 0;
+    }
+
+
+    .news-section {
+
+        padding: 45px 0;
+    }
+
+
+    .news-heading h2 {
+
+        font-size: 24px;
+    }
+
+
+    .wc-banner {
+
+        padding: 35px 25px;
+
+        text-align: center;
+    }
+
+
+    .wc-banner img {
+
+        display: none;
+    }
+
+}

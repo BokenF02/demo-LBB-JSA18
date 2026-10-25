@@ -1,0 +1,240 @@
+/* =========================================================
+   TRANG CHI TIẾT SẢN PHẨM (product-detail.html)
+
+   File này style cho:
+   - .product-name  : Tên sản phẩm
+   - .brand         : Thương hiệu
+   - .price         : Giá tiền (màu đỏ)
+   - .short-desc    : Mô tả ngắn
+   - .specs         : Thông số kỹ thuật
+   - .btn-action    : Nút "Thêm giỏ" / "Mua ngay"
+   - .product-img   : Ảnh sản phẩm (responsive)
+
+   Lưu ý: File này có navbar/footer style trùng với
+   style.css. Chỉ dùng cho product-detail.html.
+========================================================= */
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400;
+    color: #FAFFCA;
+    background-color: #ffff;
+}
+
+/* ======== NAVBAR (trùng với style.css - cần gộp) ======== */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #84AE92;
+    padding-left: 0;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 155px;
+    margin-left: 0;
+}
+
+/* Nút Login/Signup */
+.btn-login {
+    border: 2px solid #84AE92;
+    color: #5A827E;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-signup {
+    background-color: #FAFFCA;
+    color: #5A827E;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Dark mode button */
+.dark-mode-btn {
+    border: 1px solid #84AE92;
+    border-radius: 6px;
+    padding: 5px 12px;
+    background: transparent;
+    color: #5A827E;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ======== PRODUCT DETAIL ======== */
+
+/* Tên sản phẩm: chữ to, màu xanh đậm */
+.product-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5A827E;
+}
+
+/* Thương hiệu: chữ nhỏ, màu xám */
+.brand {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Giá tiền: chữ to */
+.price {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #111;
+}
+
+/* Số tiền: màu đỏ, đậm hơn để nổi bật */
+.price span {
+    color: #d11a2a;
+    font-weight: bold;
+}
+
+/* Mô tả ngắn sản phẩm */
+.short-desc {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* Thông số kỹ thuật: mỗi mục cách nhau 6px */
+.specs li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #111;
+}
+
+/* Label "Chọn size" */
+.form-label {
+    color: #111;
+}
+
+/* =========================================================
+   NÚT HÀNH ĐỘNG ("Thêm vào giỏ" / "Mua ngay")
+
+   Màu xanh lá #84AE92, hover → xanh đậm + nhảy lên 2px
+   shadow tạo cảm giác nổi 3D
+========================================================= */
+.btn-action {
+    background-color: #84AE92;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+    background-color: #5A827E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Ghi chú đặc biệt (quote từ Nike) */
+.note {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* =========================================================
+   ẢNH SẢN PHẨM CHI TIẾT
+
+   max-width: 450px → không quá lớn trên màn hình rộng
+   object-fit: contain → giữ tỷ lệ, không cắt ảnh
+   margin: 0 auto → căn giữa
+========================================================= */
+.product-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ======== FOOTER (trùng với style.css - cần gộp) ======== */
+footer {
+    background: #111;
+    color: #ddd;
+    font-size: 15px;
+}
+
+footer h5 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+footer p,
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* =========================================================
+   DARK MODE — Đảo màu chữ khi bật dark mode
+========================================================= */
+body.dark-mode .product-name {
+    color: #84AE92;
+}
+
+body.dark-mode .brand {
+    color: #ccc;
+}
+
+body.dark-mode .price {
+    color: #eee;
+}
+
+body.dark-mode .price span {
+    color: #ff6b6b;
+}
+
+body.dark-mode .short-desc {
+    color: #ddd;
+}
+
+body.dark-mode .specs li {
+    color: #ddd;
+}
+
+body.dark-mode .form-label {
+    color: #eee;
+}
+
+body.dark-mode .note {
+    color: #aaa;
+}

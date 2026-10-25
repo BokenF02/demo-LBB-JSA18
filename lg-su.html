@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- ================================GOOGLE FONT - BE VIETNAM PRO================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS  -->
+    <link rel="stylesheet" href="./CSS/lg-su.css" />
+
+
+  </head>
+  <body>
+
+
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Tạo tài khoản</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Confirm Password" />
+          <button>Đăng ký </button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Đăng nhập</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Quên mật khẩu ?</a>
+          <button>Đăng nhập </button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Chào mừng trở lại! </h1>
+            <p>Đăng nhập để tiếp tục khám phá những sản phẩm bóng đá dành cho bạn.</p>
+            <button class="hidden" id="login">Đăng nhập</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Chào mừng bạn!</h1>
+            <p>
+              Tạo tài khoản và bắt đầu hành trình chinh phục sân cỏ cùng chúng tôi.
+            </p>
+            <button class="hidden" id="register">Đăng ký </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="JS/lg-su.js"></script>
+  </body>
+</html>

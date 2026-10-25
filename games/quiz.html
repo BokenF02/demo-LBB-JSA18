@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Football Quiz</title>
+
+    <!-- Kết nối CSS -->
+    <link rel="stylesheet" href="../CSS/quiz.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         KHUNG QUIZ
+    ================================= -->
+
+    <div class="quiz-box">
+
+
+        <!-- =================================
+             HEADER
+        ================================= -->
+
+        <div class="quiz-header">
+
+            <h2>Football Quiz</h2>
+
+
+            <!-- Ô thời gian -->
+
+            <div class="time-box">
+
+                <span>Thời gian</span>
+
+                <strong id="time">30</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             THANH THỜI GIAN
+        ================================= -->
+
+        <div class="time-bar">
+
+            <div
+                class="time-progress"
+                id="timeProgress">
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             NỘI DUNG CÂU HỎI
+        ================================= -->
+
+        <div class="quiz-content">
+
+
+            <!-- Câu hỏi -->
+
+            <h3
+                class="question"
+                id="question">
+
+                Câu hỏi
+
+            </h3>
+
+
+            <!-- Danh sách đáp án -->
+
+            <div
+                class="answer-list"
+                id="answerList">
+
+                <!-- JavaScript sẽ tạo đáp án ở đây -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             FOOTER
+        ================================= -->
+
+        <div class="quiz-footer">
+
+
+            <!--
+                Hai nút này dùng CHUNG một vị trí.
+                JS sẽ quyết định nút nào xuất hiện.
+            -->
+
+            <div class="quiz-buttons">
+
+
+                <!-- Nút tiếp theo -->
+
+                <button
+                    class="next-btn"
+                    id="nextBtn">
+
+                    Tiếp theo →
+
+                </button>
+
+
+                <!-- Nút làm lại -->
+
+                <button
+                    class="retry-btn"
+                    id="retryBtn">
+
+                    Làm lại
+
+                </button>
+
+
+            </div>
+
+
+            <!-- Số câu -->
+
+            <span
+                class="question-number"
+                id="questionNumber">
+
+                1 / 10 Câu hỏi
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="../JS/quiz.js"></script>
+
+</body>
+
+</html>

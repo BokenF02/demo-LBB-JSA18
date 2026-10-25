@@ -1,0 +1,267 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =================================
+   MÀN HÌNH CHÍNH
+================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background-color: #95D5B2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* =================================
+   BẢNG LUẬT CHƠI
+================================= */
+
+.rule-box {
+
+    width: 590px;
+
+    background-color: #ffffff;
+
+    border-radius: 6px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+
+}
+
+
+/* =================================
+   PHẦN TIÊU ĐỀ
+================================= */
+
+.rule-header {
+
+    padding: 22px 30px;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.rule-header h2 {
+
+    font-size: 24px;
+
+    color: #222222;
+
+}
+
+
+/* =================================
+   PHẦN NỘI DUNG
+================================= */
+
+.rule-content {
+
+    padding: 20px 30px;
+
+}
+
+
+.rule-content ol {
+
+    padding-left: 25px;
+
+}
+
+
+.rule-content li {
+
+    margin-bottom: 15px;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #444444;
+
+}
+
+
+/* Màu chữ 15 giây */
+
+.rule-content span {
+
+    color: #95D5B2;
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   PHẦN NÚT
+================================= */
+
+.rule-footer {
+
+    padding: 12px 30px;
+
+    border-top: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+}
+
+
+/* =================================
+   NÚT THOÁT GAME
+================================= */
+
+.exit-btn {
+
+    padding: 10px 20px;
+
+    background-color: #ffffff;
+
+    color: #95D5B2;
+
+    border: 2px solid #95D5B2;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Hover */
+
+.exit-btn:hover {
+
+    background-color: #95D5B2;
+
+    color: #ffffff;
+
+}
+
+
+/* =================================
+   NÚT TIẾP TỤC
+================================= */
+
+.continue-btn {
+
+    padding: 10px 20px;
+
+    background-color: #95D5B2;
+
+    color: #ffffff;
+
+    border: 2px solid #95D5B2;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Hover */
+
+.continue-btn:hover {
+
+    background-color: #ffffff;
+
+    color: #95D5B2;
+
+}
+
+
+/* =================================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 768px) {
+
+    .rule-box {
+
+        width: 90%;
+
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE - ĐIỆN THOẠI
+================================= */
+
+@media (max-width: 576px) {
+
+    .rule-box {
+
+        width: 92%;
+
+    }
+
+
+    .rule-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .rule-content li {
+
+        font-size: 15px;
+
+    }
+
+
+    .rule-footer {
+
+        padding: 15px 20px;
+
+    }
+
+}

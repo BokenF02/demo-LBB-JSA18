@@ -1,0 +1,648 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Khang Football</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <!-- Filter (loaded by components.js) -->
+    <div id="site-filter"></div>
+
+    <!-- =====================================================
+         NAVBAR (loaded by components.js)
+    ====================================================== -->
+
+    <div id="site-navbar"></div>
+
+    <!-- =====================================================
+         ADVERTISEMENT
+    ====================================================== -->
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./images/sigma.jpg"
+            class="d-block w-100"
+            alt="Khang Football"
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="./images/sub.jpg"
+            class="d-block w-100"
+            alt="Khang Football"
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="./images/ball.jpg"
+            class="d-block w-100"
+            alt="Khang Football"
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="kf-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <!-- LEFT -->
+
+          <div class="col-lg-6">
+            <div class="kf-hero-content">
+              <span class="kf-hero-label"> KHANG FOOTBALL </span>
+
+              <h1>
+                SỐNG CÙNG
+
+                <span> ĐAM MÊ </span>
+
+                BÓNG ĐÁ
+              </h1>
+
+              <p>
+                Khám phá những sản phẩm bóng đá phù hợp với phong cách và vị trí
+                thi đấu của bạn. Từ giày bóng đá, quần áo đến các phụ kiện dành
+                cho những người yêu sân cỏ.
+              </p>
+
+              <div class="kf-hero-buttons">
+                <a href="./different.html" class="kf-hero-btn-primary">
+                  KHÁM PHÁ SẢN PHẨM
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="./news/home.html" class="kf-hero-btn-outline">
+                  TIN TỨC BÓNG ĐÁ
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+
+          <div class="col-lg-6">
+            <div class="kf-hero-image">
+              <img src="./images/sigma.jpg" alt="Khang Football" />
+
+              <div class="kf-hero-overlay"></div>
+
+              <div class="kf-hero-badge">
+                <strong> 100% </strong>
+
+                <span> ĐAM MÊ SÂN CỎ </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PRODUCT
+    ====================================================== -->
+
+    <section class="kf-product-section">
+      <div class="container">
+        <div class="kf-product-heading">
+          <div>
+            <span> SẢN PHẨM </span>
+
+            <h2>Sản phẩm nổi bật</h2>
+
+            <p>Những mẫu giày bóng đá được yêu thích tại Khang Football.</p>
+          </div>
+
+          <a href="./different.html" class="kf-product-view-all">
+            Xem tất cả
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- ==========================================
+             DANH SÁCH SẢN PHẨM NỔI BẬT
+             ========================================== -->
+        <div class="row g-4">
+          <!-- ======== SẢN PHẨM 1: Giày cỏ nhân tạo ========-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="kf-product-card">
+              <div class="kf-product-card-image">
+                <span class="kf-product-label"> HOT </span>
+
+                <button type="button" class="kf-product-heart">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <a href="product-detail.html?id=1" class="kf-product-card-link">
+                  <img
+                    src="./images/shoesss/tf-boots.jpg"
+                    alt="Giày bóng đá cỏ nhân tạo"
+                  />
+                </a>
+              </div>
+
+              <div class="kf-product-card-info">
+                <span class="kf-product-brand"> KHANG FOOTBALL </span>
+
+                <h3>
+                  <a href="product-detail.html?id=1">
+                    Giày bóng đá cỏ nhân tạo
+                  </a>
+                </h3>
+
+                <div class="kf-product-rating">
+                  <span> ★★★★★ </span>
+                  <small> (24) </small>
+                </div>
+
+                <div class="kf-product-card-bottom">
+                  <strong> 899.000đ </strong>
+                  <button type="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ======== SẢN PHẨM 2 ======== -->
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="kf-product-card">
+              <div class="kf-product-card-image">
+                <span class="kf-product-label"> HOT </span>
+
+                <button type="button" class="kf-product-heart">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <a href="product-detail.html?id=2" class="kf-product-card-link">
+                  <img
+                    src="./images/shoesss/fg-boots.jpg"
+                    alt="Giày bóng đá sân tự nhiên"
+                  />
+                </a>
+              </div>
+
+              <div class="kf-product-card-info">
+                <span class="kf-product-brand"> KHANG FOOTBALL </span>
+
+                <h3>
+                  <a href="product-detail.html?id=2">
+                    Giày bóng đá sân tự nhiên
+                  </a>
+                </h3>
+
+                <div class="kf-product-rating">
+                  <span> ★★★★★ </span>
+
+                  <small> (18) </small>
+                </div>
+
+                <div class="kf-product-card-bottom">
+                  <strong> 1.299.000đ </strong>
+
+                  <button type="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 3 -->
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="kf-product-card">
+              <div class="kf-product-card-image">
+                <span class="kf-product-label"> NEW </span>
+
+                <button type="button" class="kf-product-heart">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <a href="product-detail.html?id=3" class="kf-product-card-link">
+                  <img
+                    src="./images/shoesss/futsal-shoes.jpg"
+                    alt="Giày futsal"
+                  />
+                </a>
+              </div>
+
+              <div class="kf-product-card-info">
+                <span class="kf-product-brand"> KHANG FOOTBALL </span>
+
+                <h3>
+                  <a href="product-detail.html?id=3"> Giày bóng đá futsal </a>
+                </h3>
+
+                <div class="kf-product-rating">
+                  <span> ★★★★★ </span>
+
+                  <small> (31) </small>
+                </div>
+
+                <div class="kf-product-card-bottom">
+                  <strong> 799.000đ </strong>
+
+                  <button type="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 4 -->
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="kf-product-card">
+              <div class="kf-product-card-image">
+                <span class="kf-product-label"> HOT </span>
+
+                <button type="button" class="kf-product-heart">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <a href="product-detail.html?id=4" class="kf-product-card-link">
+                  <img src="./images/shoesss/ao-bong-da.jpg" alt="Áo bóng đá" />
+                </a>
+              </div>
+
+              <div class="kf-product-card-info">
+                <span class="kf-product-brand"> KHANG FOOTBALL </span>
+
+                <h3>
+                  <a href="product-detail.html?id=4"> Áo bóng đá chính hãng </a>
+                </h3>
+
+                <div class="kf-product-rating">
+                  <span> ★★★★★ </span>
+
+                  <small> (16) </small>
+                </div>
+
+                <div class="kf-product-card-bottom">
+                  <strong> 499.000đ </strong>
+
+                  <button type="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BRAND
+    ====================================================== -->
+
+    <section class="kf-brand-section">
+      <div class="container">
+        <div class="kf-section-heading">
+          <span> THƯƠNG HIỆU </span>
+
+          <h2>Thương hiệu nổi bật</h2>
+
+          <p>Những thương hiệu bóng đá được yêu thích.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <a href="./nike.html" class="kf-brand-card">
+              <strong> NIKE </strong>
+
+              <span> Bứt phá giới hạn </span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="./addidas.html" class="kf-brand-card">
+              <strong> ADIDAS </strong>
+
+              <span> Làm chủ sân cỏ </span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="./puma.html" class="kf-brand-card">
+              <strong> PUMA </strong>
+
+              <span> Chơi đầy bản lĩnh </span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="./mizuno.html" class="kf-brand-card">
+              <strong> MIZUNO </strong>
+
+              <span> Chạm bóng hoàn hảo </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BẠN ĐANG TÌM?
+    ====================================================== -->
+
+    <section class="container my-5 find-section">
+      <h3 class="text-center mb-4 title">BẠN ĐANG TÌM?</h3>
+
+      <div class="row g-4">
+        <!-- GIÀY NHÂN TẠO -->
+
+        <div class="col-6 col-md-4">
+          <a href="./nhantao.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/shoesss/nhân tạo.jpg"
+                class="card-img-top"
+                alt="Giày cỏ nhân tạo"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-shoe-prints"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Giày nhân tạo</h6>
+
+                  <p>TF • FG • AG • IC</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- GIÀY TỰ NHIÊN -->
+
+        <div class="col-6 col-md-4">
+          <a href="./tunhien.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/shoesss/tự nhiên.jpg"
+                class="card-img-top"
+                alt="Giày cỏ tự nhiên"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-shoe-prints"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Giày tự nhiên</h6>
+
+                  <p>TF • FG • AG • IC</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- FUTSAL -->
+
+        <div class="col-6 col-md-4">
+          <a href="./trongnha.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/shoesss/fustal.jpg"
+                class="card-img-top"
+                alt="Giày futsal"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-shoe-prints"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Giày fustal</h6>
+
+                  <p>TF • FG • AG • IC</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- ÁO BÓNG ĐÁ -->
+
+        <div class="col-6 col-md-4">
+          <a href="./different.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/shoesss/áo.jpg"
+                class="card-img-top"
+                alt="Áo bóng đá"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-shirt"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Quần áo</h6>
+
+                  <p>CLB • Đội tuyển</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- BÓNG -->
+
+        <div class="col-6 col-md-4">
+          <a href="./different.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/ball.jpg"
+                class="card-img-top"
+                alt="Quà bóng đá"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-futbol"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Bóng đá</h6>
+
+                  <p>Bóng thi đấu</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- PHỤ KIỆN -->
+
+        <div class="col-6 col-md-4">
+          <a href="./different.html">
+            <div class="card h-100 shadow-sm find-card">
+              <img
+                src="./images/sub.jpg"
+                class="card-img-top"
+                alt="Phụ kiện sân"
+              />
+
+              <div class="find-card-content">
+                <div class="find-card-icon">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <div class="find-card-text">
+                  <h6>Phụ kiện</h6>
+
+                  <p>Balo • Vớ • Găng tay</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right find-card-arrow"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter py-5 text-center">
+      <h3>Đăng ký nhận ưu đãi</h3>
+
+      <p>Nhập email để nhận thông tin khuyến mãi mới nhất</p>
+
+      <form class="d-flex justify-content-center mt-3">
+        <input
+          type="email"
+          class="form-control w-50"
+          placeholder="Nhập email của bạn"
+        />
+
+        <button class="btn btn-main ms-2">Đăng ký</button>
+      </form>
+    </section>
+    <!-- =====================================================
+         FOOTER (loaded by components.js)
+    ====================================================== -->
+
+    <div id="site-footer"></div>
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JS/components.js"></script>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,794 @@
+/* =========================================================
+   KHANG FOOTBALL - HELP
+   Trang trợ giúp
+   Màu chủ đạo: #95D5B2
+========================================================= */
+
+
+:root {
+
+    --green-main: #84AE92;
+
+    --green-dark: #5A827E;
+
+    --green-light: #95D5B2;
+
+    --green-soft: #B9D4AA;
+
+    --cream: #FAFFCA;
+
+    --text-main: #1d2521;
+
+    --text-gray: #737d78;
+
+    --border: #dfe7e2;
+
+    --light-bg: #f5f8f6;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 10px 30px rgba(27, 53, 42, 0.10);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.help-hero {
+
+    position: relative;
+
+    padding: 85px 0 120px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #95D5B2 0%,
+            #5A827E 60%,
+            #2d4a41 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.help-hero::after {
+
+    content: "❓";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -55px;
+
+    font-size: 190px;
+
+    opacity: 0.12;
+
+    transform: rotate(15deg);
+}
+
+
+.help-hero-label {
+
+    display: inline-block;
+
+    padding: 6px 18px;
+
+    margin-bottom: 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.help-hero h1 {
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+.help-hero p {
+
+    max-width: 620px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   Ô TÌM KIẾM
+========================================================= */
+
+.help-search {
+
+    position: relative;
+
+    max-width: 620px;
+
+    margin: 0 auto;
+}
+
+
+.help-search input {
+
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 60px 0 24px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    font-size: 15px;
+
+    color: var(--text-main);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.help-search input:focus {
+
+    outline: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.help-search input::placeholder {
+
+    color: var(--text-gray);
+}
+
+
+.help-search i {
+
+    position: absolute;
+
+    top: 50%;
+    right: 22px;
+
+    transform: translateY(-50%);
+
+    color: var(--green-main);
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   DANH MỤC CÂU HỎI
+========================================================= */
+
+.help-cats {
+
+    margin-top: -60px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.help-cat-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 26px 20px;
+
+    height: 100%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+
+.help-cat-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--green-light);
+
+    box-shadow: 0 16px 36px rgba(27, 53, 42, 0.16);
+}
+
+
+.help-cat-icon {
+
+    width: 62px;
+    height: 62px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 24px;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.help-cat-card:hover .help-cat-icon,
+.help-cat-card.active .help-cat-icon {
+
+    background: var(--green-dark);
+
+    color: #ffffff;
+}
+
+
+.help-cat-card.active {
+
+    border-color: var(--green-dark);
+
+    box-shadow: 0 16px 36px rgba(27, 53, 42, 0.18);
+}
+
+
+.help-cat-card h3 {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: var(--text-main);
+
+    margin-bottom: 6px;
+}
+
+
+.help-cat-card span {
+
+    color: var(--text-gray);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.help-section {
+
+    padding: 70px 0;
+}
+
+
+.help-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.help-heading span {
+
+    color: var(--green-main);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.help-heading h2 {
+
+    margin: 8px 0 10px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text-main);
+}
+
+
+.help-heading p {
+
+    color: var(--text-gray);
+
+    font-size: 14px;
+}
+
+
+.help-faq-wrap {
+
+    max-width: 860px;
+
+    margin: 0 auto;
+}
+
+
+.help-faq-item {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    margin-bottom: 14px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+
+.help-faq-question {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 18px 22px;
+
+    background: none;
+
+    border: none;
+
+    text-align: left;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: var(--text-main);
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+
+.help-faq-question:hover {
+
+    color: var(--green-dark);
+}
+
+
+.help-faq-question .faq-icon {
+
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 13px;
+
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+
+.help-faq-item.open .help-faq-question .faq-icon {
+
+    transform: rotate(45deg);
+
+    background: var(--green-dark);
+
+    color: #ffffff;
+}
+
+
+.help-faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.35s ease;
+}
+
+
+.help-faq-answer p {
+
+    padding: 0 22px 20px;
+
+    margin: 0;
+
+    color: var(--text-gray);
+
+    font-size: 13.5px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BẢNG SIZE GIÀY
+========================================================= */
+
+.size-table-wrap {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+
+.size-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.size-table thead {
+
+    background: var(--green-light);
+}
+
+
+.size-table thead th {
+
+    padding: 14px 16px;
+
+    color: #1d4a37;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+.size-table tbody tr {
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.size-table tbody tr:last-child {
+
+    border-bottom: none;
+}
+
+
+.size-table tbody tr:hover {
+
+    background: var(--light-bg);
+}
+
+
+.size-table td {
+
+    padding: 13px 16px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--text-main);
+}
+
+
+.size-table .size-highlight {
+
+    font-weight: 700;
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   LIÊN HỆ TRỰC TIẾP
+========================================================= */
+
+.help-contact-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 30px 24px;
+
+    height: 100%;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.help-contact-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 36px rgba(27, 53, 42, 0.16);
+}
+
+
+.help-contact-card .contact-icon {
+
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 24px;
+}
+
+
+.help-contact-card h3 {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--text-main);
+
+    margin-bottom: 8px;
+}
+
+
+.help-contact-card p {
+
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+.help-contact-card .contact-btn {
+
+    display: inline-block;
+
+    padding: 10px 26px;
+
+    border-radius: 30px;
+
+    background: var(--green-light);
+
+    color: #1d4a37;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+.help-contact-card .contact-btn:hover {
+
+    background: var(--green-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode .help-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2d4a41 0%,
+            #16211d 100%
+        );
+}
+
+
+body.dark-mode .help-cat-card,
+body.dark-mode .help-faq-item,
+body.dark-mode .help-contact-card,
+body.dark-mode .size-table-wrap {
+
+    background: #1b2420;
+
+    border-color: #2c3a34;
+}
+
+
+body.dark-mode .help-cat-card h3,
+body.dark-mode .help-faq-question,
+body.dark-mode .help-contact-card h3,
+body.dark-mode .size-table td {
+
+    color: #eeeeee;
+}
+
+
+body.dark-mode .help-faq-answer p {
+
+    color: #9aa8a0;
+}
+
+
+body.dark-mode .size-table tbody tr {
+
+    border-color: #2c3a34;
+}
+
+
+body.dark-mode .size-table tbody tr:hover {
+
+    background: #24302b;
+}
+
+
+body.dark-mode .help-search input {
+
+    background: #1b2420;
+
+    color: #eeeeee;
+}
+
+
+body.dark-mode .help-search input::placeholder {
+
+    color: #8d9c94;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .help-hero {
+
+        padding: 60px 0 100px;
+    }
+
+
+    .help-hero h1 {
+
+        font-size: 28px;
+    }
+
+
+    .help-cats {
+
+        margin-top: -50px;
+    }
+
+
+    .help-section {
+
+        padding: 45px 0;
+    }
+
+
+    .help-heading h2 {
+
+        font-size: 24px;
+    }
+
+
+    .size-table thead {
+
+        display: none;
+    }
+
+
+    .size-table td {
+
+        display: block;
+
+        text-align: left;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .size-table tbody tr {
+
+        border-bottom: 2px solid var(--border);
+    }
+
+}

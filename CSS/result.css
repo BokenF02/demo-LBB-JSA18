@@ -1,0 +1,658 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #95D5B2,
+            #B7E4C7
+        );
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    color: #26382E;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =================================
+   KHUNG CHÍNH
+================================= */
+
+.result-container {
+
+    width: 100%;
+
+    max-width: 1000px;
+}
+
+
+/* =================================
+   TIÊU ĐỀ
+================================= */
+
+.result-header {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.result-header h1 {
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.result-header p {
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+
+/* =================================
+   THÔNG BÁO
+================================= */
+
+.result-notice {
+
+    background: #ffffff;
+
+    border-left:
+        6px solid #2D6A4F;
+
+    border-radius: 15px;
+
+    padding: 18px 24px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(45, 106, 79, 0.15);
+}
+
+
+.notice-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #D8F3DC;
+
+    color: #2D6A4F;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+
+.notice-content h2 {
+
+    color: #2D6A4F;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.notice-content p {
+
+    color: #687A70;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   KHÔNG ĐẠT
+================================= */
+
+.result-notice.failed {
+
+    border-left-color: #E6A23C;
+
+    background: #FFFDF7;
+}
+
+
+.result-notice.failed .notice-icon {
+
+    background: #FFF0D3;
+
+    color: #C47A00;
+}
+
+
+.result-notice.failed
+.notice-content h2 {
+
+    color: #A96500;
+}
+
+
+/* =================================
+   BẢNG KẾT QUẢ
+================================= */
+
+.result-box {
+
+    width: 100%;
+
+    min-height: 440px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    box-shadow:
+        0 18px 40px
+        rgba(45, 106, 79, 0.18);
+}
+
+
+/* =================================
+   THỐNG KÊ
+================================= */
+
+.statistics {
+
+    padding: 40px 45px;
+}
+
+
+.statistics h2 {
+
+    color: #2D6A4F;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   STAT
+================================= */
+
+.stat-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 0;
+
+    border-bottom:
+        1px solid #EAF2ED;
+}
+
+
+.stat-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+}
+
+
+.stat-icon.correct {
+
+    background: #D8F3DC;
+
+    color: #2D6A4F;
+}
+
+
+.stat-icon.wrong {
+
+    background: #FDE8E7;
+
+    color: #D9534F;
+}
+
+
+.stat-icon.time {
+
+    background: #E3F4EA;
+
+    color: #2D6A4F;
+}
+
+
+.stat-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.stat-info span {
+
+    color: #7A8B82;
+
+    font-size: 14px;
+}
+
+
+.stat-info strong {
+
+    color: #26382E;
+
+    font-size: 22px;
+}
+
+
+/* =================================
+   ĐIỂM
+================================= */
+
+.score-box {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #F1FAF4;
+
+    border: 1px solid #D8F3DC;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.score-box > span {
+
+    color: #52705F;
+
+    font-weight: 600;
+}
+
+
+.score-box strong {
+
+    color: #2D6A4F;
+
+    font-size: 34px;
+
+    font-weight: 800;
+}
+
+
+.score-box small {
+
+    color: #7A8B82;
+
+    font-size: 18px;
+}
+
+
+/* =================================
+   PHẦN THƯỞNG
+================================= */
+
+.reward {
+
+    position: relative;
+
+    padding: 30px 25px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #F8FCF9,
+            #EDF8F1
+        );
+
+    border-left:
+        1px solid #E1ECE5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =================================
+   LOGO GÓC TRÁI
+================================= */
+
+.reward-logo {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: #2D6A4F;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.reward h2 {
+
+    color: #2D6A4F;
+
+    font-size: 23px;
+
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+}
+
+
+.reward-description {
+
+    color: #718078;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   DANH SÁCH PHẦN THƯỞNG
+================================= */
+
+.reward-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+/* =================================
+   VÒNG TRÒN
+================================= */
+
+.reward-item {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #D8F3DC,
+            #B7E4C7
+        );
+
+    border:
+        3px solid #95D5B2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+}
+
+
+.reward-item:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 10px 20px
+        rgba(45, 106, 79, 0.2);
+}
+
+
+.reward-item i {
+
+    color: #2D6A4F;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+
+.reward-item span {
+
+    color: #52705F;
+
+    font-size: 10px;
+}
+
+
+.reward-item strong {
+
+    color: #2D6A4F;
+
+    font-size: 18px;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.result-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+}
+
+
+.result-buttons button {
+
+    min-width: 170px;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.result-buttons button:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =================================
+   VỀ TRANG CHỦ
+================================= */
+
+.btn-home {
+
+    background: #ffffff;
+
+    color: #2D6A4F;
+
+    border:
+        2px solid #ffffff;
+}
+
+
+/* =================================
+   CHƠI LẠI
+================================= */
+
+.btn-retry {
+
+    background: #2D6A4F;
+
+    color: #ffffff;
+
+    border:
+        2px solid #2D6A4F;
+}
+
+
+.btn-retry:hover {
+
+    background: #40916C;
+
+    border-color: #40916C;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+    .result-box {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .reward {
+
+        border-left: none;
+
+        border-top:
+            1px solid #E1ECE5;
+    }
+
+
+    .result-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .result-buttons button {
+
+        width: 100%;
+    }
+
+}

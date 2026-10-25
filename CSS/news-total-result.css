@@ -1,0 +1,692 @@
+/* =========================================================
+   KHANG FOOTBALL - NEWS RESULT
+   Trang kết quả trận đấu World Cup 2026
+   Màu chủ đạo: #95D5B2
+========================================================= */
+
+
+:root {
+
+    --green-main: #84AE92;
+
+    --green-dark: #5A827E;
+
+    --green-light: #95D5B2;
+
+    --green-soft: #B9D4AA;
+
+    --cream: #FAFFCA;
+
+    --text-main: #1d2521;
+
+    --text-gray: #737d78;
+
+    --border: #dfe7e2;
+
+    --light-bg: #f5f8f6;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 10px 30px rgba(27, 53, 42, 0.10);
+
+}
+
+
+/* =========================================================
+   HERO / BREADCRUMB
+========================================================= */
+
+.result-hero {
+
+    position: relative;
+
+    padding: 85px 0;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #95D5B2 0%,
+            #5A827E 60%,
+            #2d4a41 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.result-hero::after {
+
+    content: "🏆";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -45px;
+
+    font-size: 190px;
+
+    opacity: 0.12;
+
+    transform: rotate(12deg);
+}
+
+
+.result-hero-label {
+
+    display: inline-block;
+
+    padding: 6px 18px;
+
+    margin-bottom: 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.result-hero h1 {
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+.result-hero p {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CHAMPION BANNER
+========================================================= */
+
+.champion-banner {
+
+    position: relative;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    padding: 45px 40px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            120deg,
+            #2d4a41 0%,
+            #5A827E 55%,
+            #95D5B2 120%
+        );
+
+    box-shadow: var(--shadow);
+
+    margin-top: -35px;
+
+    z-index: 2;
+}
+
+
+.champion-flag {
+
+    width: 86px;
+
+    height: 58px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+
+.champion-banner .champion-title {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--cream);
+
+    margin-bottom: 6px;
+}
+
+
+.champion-banner h2 {
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    margin-bottom: 4px;
+}
+
+
+.champion-banner .champion-sub {
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+
+    margin-bottom: 0;
+}
+
+
+.champion-banner .champion-score {
+
+    text-align: center;
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    color: var(--cream);
+}
+
+
+.champion-banner .champion-score small {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BẢNG KẾT QUẢ
+========================================================= */
+
+.result-section {
+
+    padding: 70px 0 50px;
+}
+
+
+.result-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.result-heading span {
+
+    color: var(--green-main);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.result-heading h2 {
+
+    margin: 8px 0 10px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text-main);
+}
+
+
+.result-table-wrap {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow-x: auto;
+
+    box-shadow: var(--shadow);
+}
+
+
+.result-table {
+
+    width: 100%;
+
+    min-width: 860px;
+
+    border-collapse: collapse;
+}
+
+
+.result-table thead {
+
+    background: var(--green-light);
+}
+
+
+.result-table thead th {
+
+    padding: 14px 16px;
+
+    color: #1d4a37;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+.result-table tbody tr {
+
+    border-bottom: 1px solid var(--border);
+
+    transition: background 0.25s ease;
+}
+
+
+.result-table tbody tr:last-child {
+
+    border-bottom: none;
+}
+
+
+.result-table tbody tr:hover {
+
+    background: var(--light-bg);
+}
+
+
+.result-table td {
+
+    padding: 15px 14px;
+
+    vertical-align: middle;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: var(--text-main);
+}
+
+
+.result-table .res-stage {
+
+    color: var(--green-dark);
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.result-table .res-team {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    font-weight: 600;
+}
+
+
+.result-table .res-team strong {
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+
+.result-table .res-team img {
+
+    width: 96px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.result-table .res-team.home {
+
+    justify-content: flex-end;
+}
+
+
+.result-table .res-team.away {
+
+    justify-content: flex-start;
+}
+
+
+.result-table .res-score {
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    color: var(--green-dark);
+
+    white-space: nowrap;
+}
+
+
+.result-table .res-date {
+
+    color: var(--text-gray);
+
+    white-space: nowrap;
+}
+
+
+.result-table .res-venue {
+
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    max-width: 200px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.result-sidebar .side-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.side-card h4 {
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    color: var(--text-main);
+
+    margin-bottom: 16px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid var(--green-light);
+}
+
+
+.side-card ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+.side-card li {
+
+    padding: 10px 0;
+
+    border-bottom: 1px dashed var(--border);
+
+    font-size: 13px;
+
+    color: var(--text-main);
+}
+
+
+.side-card li:last-child {
+
+    border-bottom: none;
+}
+
+
+.side-card li .year {
+
+    display: inline-block;
+
+    min-width: 46px;
+
+    font-weight: 800;
+
+    color: var(--green-dark);
+}
+
+
+.side-card li .winner {
+
+    float: right;
+
+    color: var(--text-gray);
+}
+
+
+.side-fact {
+
+    display: flex;
+
+    gap: 14px;
+
+    align-items: flex-start;
+
+    padding: 12px 0;
+
+    border-bottom: 1px dashed var(--border);
+}
+
+
+.side-fact:last-child {
+
+    border-bottom: none;
+}
+
+
+.side-fact i {
+
+    color: var(--green-main);
+
+    font-size: 17px;
+
+    margin-top: 2px;
+}
+
+
+.side-fact strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: var(--text-main);
+}
+
+
+.side-fact span {
+
+    font-size: 12px;
+
+    color: var(--text-gray);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode .result-table-wrap,
+body.dark-mode .result-sidebar .side-card {
+
+    background: #1b2420;
+
+    border-color: #2c3a34;
+}
+
+
+body.dark-mode .result-table tbody tr {
+
+    border-color: #2c3a34;
+}
+
+
+body.dark-mode .result-table tbody tr:hover {
+
+    background: #24302b;
+}
+
+
+body.dark-mode .result-table td,
+body.dark-mode .side-card h4,
+body.dark-mode .side-card li {
+
+    color: #d8e2dd;
+}
+
+
+body.dark-mode .result-table .res-venue,
+body.dark-mode .result-table .res-date {
+
+    color: #8d9c94;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .result-hero {
+
+        padding: 60px 0;
+    }
+
+
+    .result-hero h1 {
+
+        font-size: 28px;
+    }
+
+
+    .champion-banner {
+
+        padding: 30px 20px;
+    }
+
+
+    .champion-banner h2 {
+
+        font-size: 22px;
+    }
+
+
+    .result-section {
+
+        padding: 45px 0 30px;
+    }
+
+
+    .result-table thead {
+
+        display: none;
+    }
+
+
+    .result-table td {
+
+        display: block;
+
+        text-align: left;
+
+        border-bottom: 1px solid var(--border);
+
+        padding: 9px 16px;
+    }
+
+
+    .result-table tbody tr {
+
+        border-bottom: 2px solid var(--border);
+    }
+
+
+    .result-table .res-venue {
+
+        max-width: none;
+    }
+
+}

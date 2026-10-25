@@ -1,0 +1,421 @@
+/* ============================================================
+   PRESENTATION — KHANG FOOTBALL
+   File CSS riêng cho bài thuyết trình
+=========================================================== */
+
+/* ============================================================
+   RESET & GLOBAL
+=========================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+/* ============================================================
+   SLIDE CONTAINER
+=========================================================== */
+.slides-wrapper {
+    width: 100%; height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(60px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    overflow-y: auto;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.slide.exit-left {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-60px);
+}
+
+.slide-inner {
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* ============================================================
+   NAVIGATION ARROWS
+=========================================================== */
+.nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(132,174,146,0.4);
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(8px);
+    color: #84AE92;
+    font-size: 20px;
+
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background: #84AE92;
+    color: #fff;
+    border-color: #84AE92;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow.left  { left: 24px; }
+.nav-arrow.right { right: 24px; }
+
+.nav-arrow.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* ============================================================
+   PROGRESS BAR
+=========================================================== */
+.progress-bar {
+    position: fixed;
+    bottom: 0; left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #5A827E, #84AE92, #B9D4AA);
+    transition: width 0.4s ease;
+    z-index: 100;
+}
+
+/* ============================================================
+   SLIDE COUNTER
+=========================================================== */
+.slide-counter {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #5A6B65;
+    z-index: 100;
+    letter-spacing: 2px;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+=========================================================== */
+.slide-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #84AE92;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+h1 span { color: #84AE92; }
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+h2 span { color: #84AE92; }
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #aab7b0;
+}
+
+strong { color: #e6edf3; }
+
+/* ============================================================
+   CARDS / BOXES
+=========================================================== */
+.card-grid {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(132,174,146,0.15);
+    border-radius: 12px;
+    padding: 22px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(132,174,146,0.4);
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-3px);
+}
+
+.card .icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgba(132,174,146,0.15);
+    color: #84AE92;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.card h3 { font-size: 17px; margin-bottom: 6px; }
+.card p  { font-size: 13px; line-height: 1.6; }
+
+/* ============================================================
+   CODE BLOCK
+=========================================================== */
+.code-block {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 18px;
+    font-family: "Cascadia Code", "Fira Code", Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #e6edf3;
+    overflow-x: auto;
+}
+
+.code-block .comment { color: #5A6B65; }
+.code-block .tag     { color: #7ee787; }
+.code-block .attr    { color: #79c0ff; }
+.code-block .string  { color: #a5d6ff; }
+.code-block .keyword { color: #ff7b72; }
+.code-block .func    { color: #d2a8ff; }
+.code-block .number  { color: #79c0ff; }
+
+/* ============================================================
+   FLOW DIAGRAM
+=========================================================== */
+.flow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.flow-step {
+    background: rgba(132,174,146,0.1);
+    border: 1px solid rgba(132,174,146,0.25);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #84AE92;
+    white-space: nowrap;
+}
+
+.flow-arrow {
+    color: #5A6B65;
+    font-size: 16px;
+}
+
+/* ============================================================
+   TABLE
+=========================================================== */
+.slide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.slide-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: rgba(132,174,146,0.1);
+    color: #84AE92;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(132,174,146,0.2);
+}
+
+.slide-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: #aab7b0;
+}
+
+.slide-table tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+
+/* ============================================================
+   BADGE
+=========================================================== */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge.green  { background: rgba(132,174,146,0.2); color: #84AE92; }
+.badge.blue   { background: rgba(121,192,255,0.15); color: #79c0ff; }
+.badge.orange { background: rgba(255,166,87,0.15); color: #ffa657; }
+.badge.red    { background: rgba(255,123,114,0.15); color: #ff7b72; }
+
+/* ============================================================
+   LIST
+=========================================================== */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 14px;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    padding-left: 22px;
+    position: relative;
+    font-size: 15px;
+}
+
+.feature-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #84AE92;
+    font-weight: 700;
+}
+
+/* ============================================================
+   TWO COLUMN LAYOUT
+=========================================================== */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ============================================================
+   TITLE SLIDE SPECIAL
+=========================================================== */
+.title-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-slide h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.title-slide .subtitle {
+    font-size: 20px;
+    color: #aab7b0;
+    margin-bottom: 30px;
+}
+
+.title-slide .meta {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #5A6B65;
+}
+
+.title-slide .meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.title-slide .meta i { color: #84AE92; }
+
+/* ============================================================
+   TREE
+=========================================================== */
+.tree {
+    font-family: "Cascadia Code", Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #aab7b0;
+    margin-top: 16px;
+}
+
+.tree .folder { color: #84AE92; font-weight: 700; }
+.tree .file   { color: #79c0ff; }
+.tree .note   { color: #5A6B65; font-style: italic; }
+
+
+/* ============================================================
+   FIX: Slide 4 & 12 — nội dung bị che khi quá dài
+   align-items: flex-start để nội dung bắt đầu từ trên xuống
+   padding-top bù lại phần center bị mất
+=========================================================== */
+.slide:nth-child(4),
+.slide:nth-child(12) {
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+/* Slide 7 (Demo) — nội dung dài, cần scroll từ trên xuống */
+.slide:nth-child(7) {
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.slide:nth-child(7) .two-col img {
+    max-height: 200px;
+}
+
+.slide:nth-child(7) .card-grid {
+    margin-top: 10px;
+}
+
+/* Giảm chiều cao ảnh để vừa màn hình */
+.slide:nth-child(4) .two-col img {
+    max-height: 220px;
+}
+
+.slide:nth-child(12) .two-col img {
+    max-height: 150px;
+}

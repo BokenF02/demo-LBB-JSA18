@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tin tức bóng đá – Khang Football</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/news-home.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <a class="navbar-brand logo-brand" href="../index.html">
+
+                    <img src="../images/logo.png" alt="Khang Football">
+
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- MENU + SEARCH -->
+
+            <div class="col-md-6">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- SEARCH -->
+
+                    <form class="d-flex w-75" role="search">
+
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm tin tức..." aria-label="Search">
+
+                    </form>
+
+
+
+                    <!-- MENU -->
+
+                    <div class="menu-wrapper">
+
+
+                        <!-- HÀNG 1 -->
+
+                        <ul class="navbar-nav menu-top">
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="../index.html">
+                                    Trang chủ
+                                </a>
+
+                            </li>
+
+
+                            <!-- THƯƠNG HIỆU -->
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Thương hiệu
+                                </a>
+
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="../nike.html">Nike</a></li>
+                                    <li><a class="dropdown-item" href="../addidas.html">Adidas</a></li>
+                                    <li><a class="dropdown-item" href="../mizuno.html">Mizuno</a></li>
+                                    <li><a class="dropdown-item" href="../puma.html">Puma</a></li>
+
+                                </ul>
+
+                            </li>
+
+
+
+                            <!-- LOẠI GIÀY -->
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Loại giày
+                                </a>
+
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="../tunhien.html">Tự nhiên</a></li>
+                                    <li><a class="dropdown-item" href="../trongnha.html">Trong nhà</a></li>
+                                    <li><a class="dropdown-item" href="../nhantao.html">Nhân tạo</a></li>
+
+                                </ul>
+
+                            </li>
+
+
+
+                            <!-- PHỤ KIỆN -->
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Phụ kiện
+                                </a>
+
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="../different.html">Vớ</a></li>
+                                    <li><a class="dropdown-item" href="../different.html">Găng tay</a></li>
+                                    <li><a class="dropdown-item" href="../different.html">Bóng</a></li>
+                                    <li><a class="dropdown-item" href="../different.html">Balo</a></li>
+                                    <li><a class="dropdown-item" href="../different.html">Quần áo</a></li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+
+
+                        <!-- HÀNG 2 -->
+
+                        <ul class="navbar-nav menu-bottom">
+
+                            <li class="nav-item">
+
+                                <a class="nav-link active" href="./home.html">
+                                    Tin tức
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="./total-result.html">
+                                    Kết quả
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="../games/start.html">
+                                    Trò chơi
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="../help.html">
+                                    Trợ giúp
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT BUTTONS -->
+
+            <div class="d-flex ms-auto gap-2">
+
+                <button id="darkModeBtn" class="dark-mode-btn" type="button">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                    <span>Dark</span>
+
+                </button>
+
+
+                <a href="../lg-su.html" class="btn btn-login">Đăng nhập</a>
+                <a href="../lg-su.html" class="btn btn-signup">Đăng ký</a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="news-hero">
+
+        <div class="container">
+
+            <span class="news-hero-label">
+                KHANG FOOTBALL NEWS
+            </span>
+
+
+            <h1>
+
+                Tin tức
+
+                <span>
+                    bóng đá
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Cập nhật nhanh nhất những tin tức, kết quả trận đấu
+                và câu chuyện hấp dẫn từ sân cỏ trong nước và thế giới.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TIN NỔI BẬT
+    ====================================================== -->
+
+    <div class="news-ticker">
+
+        <div class="news-ticker-track">
+
+            <span><i class="fa-solid fa-trophy"></i>Tây Ban Nha vô địch World Cup 2026 sau chiến thắng 1-0 trước Argentina</span>
+            <span><i class="fa-solid fa-futbol"></i>Messi khép lại kỳ World Cup cuối cùng trong sự nghiệp</span>
+            <span><i class="fa-solid fa-star"></i>Anh giành hạng ba sau trận thắng 6-4 nghẹt thở trước Pháp</span>
+            <span><i class="fa-solid fa-fire"></i>Haaland và Na Uy lần đầu tiến sâu vào tứ kết</span>
+            <span><i class="fa-solid fa-crown"></i>Yamal tỏa sáng trên hành trình vô địch của La Roja</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         KẾT QUẢ NỔI BẬT
+    ====================================================== -->
+
+    <section class="news-section">
+
+        <div class="container">
+
+            <div class="news-heading">
+
+                <span>KẾT QUẢ NỔI BẬT</span>
+
+                <h2>Những trận đấu đáng nhớ</h2>
+
+                <p>Kết quả các trận đấu quan trọng nhất tại World Cup 2026.</p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- TRẬN 1 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="match-card">
+
+                        <span class="match-stage">Chung kết</span>
+
+
+                        <div class="match-teams">
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/es.png" alt="Tây Ban Nha">
+
+                                <strong>Tây Ban Nha</strong>
+
+                            </div>
+
+
+                            <div class="match-score">
+                                1 : 0
+                            </div>
+
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/ar.png" alt="Argentina">
+
+                                <strong>Argentina</strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="match-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            19/07/2026 · Hiệp phụ
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRẬN 2 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="match-card">
+
+                        <span class="match-stage">Bán kết</span>
+
+
+                        <div class="match-teams">
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/gb-eng.png" alt="Anh">
+
+                                <strong>Anh</strong>
+
+                            </div>
+
+
+                            <div class="match-score">
+                                1 : 2
+                            </div>
+
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/ar.png" alt="Argentina">
+
+                                <strong>Argentina</strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="match-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            15/07/2026 · Atlanta
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRẬN 3 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="match-card">
+
+                        <span class="match-stage">Tranh hạng ba</span>
+
+
+                        <div class="match-teams">
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/fr.png" alt="Pháp">
+
+                                <strong>Pháp</strong>
+
+                            </div>
+
+
+                            <div class="match-score">
+                                4 : 6
+                            </div>
+
+
+                            <div class="match-team">
+
+                                <img src="../images/flags/gb-eng.png" alt="Anh">
+
+                                <strong>Anh</strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="match-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            18/07/2026 · Miami
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TIN TỨC MỚI NHẤT
+    ====================================================== -->
+
+    <section class="news-section" style="background: var(--light-bg);">
+
+        <div class="container">
+
+            <div class="news-heading">
+
+                <span>TIN TỨC MỚI NHẤT</span>
+
+                <h2>Bản tin bóng đá</h2>
+
+                <p>Những câu chuyện nóng hổi nhất từ các giải đấu lớn.</p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- BÀI 1 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">World Cup</span>
+
+                            <img src="../images/news/spain-trophy.jpg" alt="Tây Ban Nha vô địch">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>20/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>2.4k</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Tây Ban Nha vô địch World Cup 2026 sau chiến thắng nghẹt thở trước Argentina
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Bàn thắng ở hiệp phụ giúp La Roja lần thứ hai bước lên đỉnh thế giới,
+                                khép lại giải đấu với chuỗi trận bất bại đầy thuyết phục.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI 2 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">Đội tuyển</span>
+
+                            <img src="../images/news/messi.jpg" alt="Messi chia tay World Cup">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>20/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>3.1k</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Messi nói lời chia tay World Cup trong nước mắt
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Huyền thoại người Argentina khép lại hành trình kỳ diệu
+                                ở tuổi 39, để lại di sản khó ai có thể sánh bằng.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI 3 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">Trận đấu</span>
+
+                            <img src="../images/news/england-france.jpg" alt="Anh thắng Pháp 6-4">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>19/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>1.8k</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Saka lập hat-trick, Anh thắng Pháp 6-4 ở trận tranh hạng ba
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Trận đấu mãn nhãn với 10 bàn thắng tại Miami,
+                                nơi "Tam Sư" vùng lên mạnh mẽ để giành huy chương đồng.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI 4 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">Ngôi sao</span>
+
+                            <img src="../images/news/haaland.jpg" alt="Haaland và Na Uy">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>18/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>1.2k</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Haaland và Na Uy: Giấc mơ chưa trọn nhưng đáng tự hào
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Lần đầu tiên trong lịch sử, Na Uy góp mặt ở tứ kết World Cup
+                                với ngôi sao số một Erling Haaland.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI 5 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">Kỷ lục</span>
+
+                            <img src="../images/news/mbappe.jpg" alt="Mbappé phá kỷ lục">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>17/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>965</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Mbappé vượt Messi, trở thành chân sút vĩ đại nhất lịch sử World Cup
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Ngôi sao người Pháp ghi dấu ấn lịch sử
+                                với kỷ lục số bàn thắng mọi thời đại tại các kỳ World Cup.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BÀI 6 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="news-card">
+
+                        <div class="news-card-image">
+
+                            <span class="news-card-tag">Tài năng trẻ</span>
+
+                            <img src="../images/news/yamal.jpg" alt="Yamal tỏa sáng">
+
+                        </div>
+
+
+                        <div class="news-card-body">
+
+                            <div class="news-card-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i>16/07/2026</span>
+                                <span><i class="fa-regular fa-comment"></i>2.0k</span>
+
+                            </div>
+
+
+                            <h3>
+                                <a href="./total-result.html">
+                                    Yamal - Ngôi sao trẻ tiếp nối hành trình vô địch của La Roja
+                                </a>
+                            </h3>
+
+
+                            <p>
+                                Tài năng 19 tuổi tiếp tục tỏa sáng rực rỡ,
+                                góp công lớn giúp Tây Ban Nha lên ngôi tại giải đấu lớn nhất hành tinh.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VIDEO NỔI BẬT
+    ====================================================== -->
+
+    <section class="news-section">
+
+        <div class="container">
+
+            <div class="news-heading">
+
+                <span>VIDEO NỔI BẬT</span>
+
+                <h2>Khoảnh khắc đáng nhớ</h2>
+
+                <p>Những thước phim ấn tượng nhất từ các trận cầu đỉnh cao.</p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- VIDEO 1 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="video-card">
+
+                        <img src="../images/news/video-goals.jpg" alt="Video bàn thắng đẹp">
+
+                        <a href="https://www.youtube.com/watch?v=--aLJLGrFts" class="video-play" target="_blank">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+
+                        <span class="video-time">11:13</span>
+
+                        <h5 class="video-title">
+                            Những bàn thắng đẹp nhất World Cup 2026
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 2 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="video-card">
+
+                        <img src="../images/news/video-spain.jpg" alt="Video khoảnh khắc">
+
+                        <a href="https://www.youtube.com/watch?v=0U-_TnYV0Bk" class="video-play" target="_blank">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+
+                        <span class="video-time">08:45</span>
+
+                        <h5 class="video-title">
+                            Hành trình vô địch của Tây Ban Nha
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 3 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="video-card">
+
+                        <img src="../images/news/video-saves.jpg" alt="Video tổng hợp">
+
+                        <a href="https://www.youtube.com/watch?v=-hKV6lVQTjM" class="video-play" target="_blank">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+
+                        <span class="video-time">15:30</span>
+
+                        <h5 class="video-title">
+                            Tổng hợp những pha cứu thua xuất thần
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA WORLD CUP
+    ====================================================== -->
+
+    <section class="news-section" style="padding-top: 0;">
+
+        <div class="container">
+
+            <div class="wc-banner">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-8">
+
+                        <h3>
+                            Kết quả World Cup 2026
+                        </h3>
+
+                        <p>
+                            Cập nhật đầy đủ kết quả từ vòng tứ kết đến trận chung kết
+                            với tỷ số chính xác, sân vận động và thời gian thi đấu.
+                        </p>
+
+                        <a href="./total-result.html" class="wc-btn">
+                            Xem kết quả chi tiết
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-4 text-center">
+
+                        <img src="../images/flags/es.png" alt="Tây Ban Nha vô địch">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter py-5 text-center">
+
+        <h3>
+            Đăng ký nhận tin bóng đá
+        </h3>
+
+        <p>
+            Nhập email để nhận những tin tức và ưu đãi mới nhất từ Khang Football
+        </p>
+
+
+        <form class="d-flex justify-content-center mt-3">
+
+            <input type="email" class="form-control w-50" placeholder="Nhập email của bạn">
+
+            <button class="btn btn-main ms-2">Đăng ký</button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="kf-footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- GIỚI THIỆU -->
+
+                <div class="col-lg-4">
+
+                    <h3 class="kf-footer-logo">
+
+                        KHANG
+                        <span>
+                            FOOTBALL
+                        </span>
+
+                    </h3>
+
+
+                    <p class="kf-footer-description">
+
+                        Nơi dành cho những người yêu bóng đá.
+                        Cùng bạn bước lên sân với sự tự tin
+                        và phong cách riêng.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- KHÁM PHÁ -->
+
+                <div class="col-6 col-md-4 col-lg-2">
+
+                    <h4>
+                        Khám phá
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            <a href="../index.html">
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../different.html">
+                                Sản phẩm
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./home.html">
+                                Tin tức
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./total-result.html">
+                                Kết quả
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- HỖ TRỢ -->
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <h4>
+                        Hỗ trợ
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            <a href="#">
+                                Hướng dẫn mua hàng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Chính sách đổi trả
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Chính sách giao hàng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Chính sách bảo mật
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- LIÊN HỆ -->
+
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <h4>
+                        Liên hệ
+                    </h4>
+
+
+                    <p class="kf-footer-contact">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        0907 427 169
+
+                    </p>
+
+
+                    <p class="kf-footer-contact">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        dangbaokhang57@gmail.com
+
+                    </p>
+
+
+                    <!-- SOCIAL -->
+
+                    <div class="kf-footer-social">
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="kf-footer-bottom">
+
+
+                <div class="kf-footer-bottom-left">
+
+                    © 2026 Khang Football
+
+                </div>
+
+
+                <div class="kf-footer-payment">
+
+                    Phương thức thanh toán:
+
+                    <strong>
+                        VISA, MasterCard, MoMo, ZaloPay
+                    </strong>
+
+                </div>
+
+
+                <div class="kf-footer-bottom-right">
+
+                    Đam mê • Sân cỏ • Phong cách
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         CART
+    ====================================================== -->
+
+    <a href="../cart.html" class="cart-btn">
+        🛒 Giỏ hàng
+    </a>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- =====================================================
+         MAIN JS
+    ====================================================== -->
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

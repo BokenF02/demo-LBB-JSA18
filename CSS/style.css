@@ -1,0 +1,2231 @@
+/* =========================================================
+   KHANG FOOTBALL - STYLE 2
+   Thiết kế chính cho index2.html
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #ffffff;
+    color: #1d2521;
+    overflow-x: hidden;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+
+/* =========================================================
+   2. MÀU CHỦ ĐẠO
+========================================================= */
+
+:root {
+    --green-main: #84AE92;
+    --green-dark: #5A827E;
+    --green-light: #95D5B2;
+    --green-soft: #B9D4AA;
+
+    --cream: #FAFFCA;
+
+    --text-main: #1d2521;
+    --text-gray: #737d78;
+
+    --border: #dfe7e2;
+
+    --light-bg: #f5f8f6;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 10px 30px rgba(27, 53, 42, 0.10);
+}
+
+
+/* =========================================================
+   3. PRODUCT FILTER
+========================================================= */
+
+.filter-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 9999;
+}
+
+
+/* Nút ba gạch */
+
+.filter-toggle {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    background-color: #ffffff;
+
+    border: 2px solid var(--green-main);
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filter-toggle:hover {
+    background-color: var(--green-main);
+    transform: scale(1.06);
+}
+
+.filter-toggle span {
+    width: 22px;
+    height: 3px;
+
+    background-color: #333333;
+
+    border-radius: 20px;
+
+    transition: background-color 0.3s ease;
+}
+
+.filter-toggle:hover span {
+    background-color: #ffffff;
+}
+
+
+/* Panel chính */
+
+.filter-panel {
+    position: absolute;
+
+    top: 0;
+    left: 60px;
+
+    width: 350px;
+    height: 525px;
+
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filter-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.filter-container:hover .filter-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* Tiêu đề */
+
+.filter-title {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    color: #1d2521;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+/* Danh sách */
+
+.filter-menu {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.filter-menu li {
+    padding: 17px 15px;
+
+    color: #1d2521;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.filter-menu li:hover {
+    color: var(--green-dark);
+    background-color: #f1f6f3;
+}
+
+
+/* =========================================================
+   4. SUBMENU FILTER
+========================================================= */
+
+.submenu-panel {
+    position: absolute;
+
+    top: 0;
+    left: 380px;
+
+    width: 260px;
+    min-height: 260px;
+
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-15px);
+
+    overflow-y: auto;
+
+    z-index: 10001;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+.submenu-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+#submenuTitle {
+    margin: 0 0 25px;
+
+    color: #1d2521;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.submenu-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 35px;
+
+    padding: 6px 5px;
+
+    color: #1d2521;
+
+    cursor: pointer;
+}
+
+.filter-option input {
+    width: 18px;
+    height: 18px;
+
+    margin: 0 12px 0 0;
+
+    flex-shrink: 0;
+
+    accent-color: var(--green-dark);
+
+    cursor: pointer;
+}
+
+.filter-option span {
+    color: #1d2521;
+
+    font-size: 15px;
+}
+
+/* =========================================================
+   5. NAVBAR
+========================================================= */
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar {
+    position: relative;
+
+    min-height: 138px;
+
+    padding: 12px 35px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff !important;
+
+    border-bottom: 1px solid #edf1ee;
+
+    z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    position: absolute;
+
+    left: 70px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+}
+
+.logo img {
+    display: block;
+
+    width: 162px;
+    height: auto;
+}
+
+/* =========================
+   KHU VỰC GIỮA
+========================= */
+
+.navbar > .col-md-6 {
+    width: 650px;
+
+    margin: 0 auto;
+}
+
+/* =========================
+   COLLAPSE
+========================= */
+
+.navbar-collapse {
+    display: flex !important;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.navbar form {
+    width: 480px !important;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.navbar form .form-control {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 9px 18px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 22px;
+
+    color: #333333;
+
+    background-color: #f8faf9;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar form .form-control:focus {
+    border-color: var(--green-main);
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(132, 174, 146, 0.15);
+}
+
+.navbar form .form-control::placeholder {
+    color: #9aa59f;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.navbar-nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    padding: 5px 0;
+
+    color: #333333;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--green-dark);
+}
+
+/* =========================
+   HÀNG THỨ HAI
+========================= */
+
+.menu-bottom {
+    gap: 50px;
+
+    margin-top: 3px;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown-menu {
+    min-width: 170px;
+
+    padding: 8px;
+
+    border: 1px solid #e2e9e5;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.dropdown-item {
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    color: var(--green-dark);
+
+    background-color: #f1f6f3;
+}
+
+/* =========================
+   KHU VỰC BÊN PHẢI
+========================= */
+
+.navbar > .d-flex.ms-auto {
+    position: absolute;
+
+    right: 35px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    align-items: center;
+
+    gap: 10px !important;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode-btn {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    height: 42px;
+
+    padding: 7px 13px;
+
+    border: 1px solid var(--green-main);
+
+    border-radius: 8px;
+
+    color: #333333;
+
+    background-color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    color: #ffffff;
+
+    background-color: var(--green-main);
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.btn-login {
+    padding: 8px 16px;
+
+    border: 2px solid #4c9141;
+
+    border-radius: 8px;
+
+    color: #4c9141;
+
+    background-color: transparent;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    color: #ffffff;
+
+    background-color: #4c9141;
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SIGN UP
+========================= */
+
+.btn-signup {
+    padding: 8px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: #333333;
+
+    background-color: var(--cream);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    color: #ffffff;
+
+    background-color: #4c9141;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   6. ADVERTISEMENT
+========================================================= */
+
+.carousel {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.carousel-item img {
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   HERO - SỐNG CÙNG ĐAM MÊ
+===================================================== */
+
+.kf-hero {
+    width: 100%;
+    padding: 70px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.kf-hero-content {
+    padding: 20px 30px 20px 0;
+}
+
+.kf-hero-label {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #84AE92;
+}
+
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.kf-hero h1 {
+    margin: 0 0 20px 0;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: #222222;
+}
+
+.kf-hero h1 span {
+    display: block;
+
+    color: #84AE92;
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.kf-hero-content p {
+    max-width: 560px;
+
+    margin: 0 0 30px 0;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.kf-hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* Nút chính */
+
+.kf-hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    background: #84AE92;
+    color: #ffffff;
+
+    border: 2px solid #84AE92;
+    border-radius: 8px;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.kf-hero-btn-primary:hover {
+    background: #84AE92;
+    border-color: #84AE92;
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(76, 145, 65, 0.25);
+}
+
+
+/* Nút phụ */
+
+.kf-hero-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    background: transparent;
+    color: #84AE92;
+
+    border: 2px solid #84AE92;
+    border-radius: 8px;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.kf-hero-btn-outline:hover {
+    background: #84AE92;
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(76, 145, 65, 0.2);
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.kf-hero-image {
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.kf-hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.kf-hero-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.kf-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(76, 145, 65, 0.20)
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.kf-hero-badge {
+    position: absolute;
+
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 145px;
+
+    padding: 15px 18px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-left: 4px solid #84AE92;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.kf-hero-badge strong {
+    margin-bottom: 3px;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+
+    color: #84AE92;
+}
+
+.kf-hero-badge span {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    color: #333333;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode .kf-hero {
+    background: #121212;
+}
+
+body.dark-mode .kf-hero h1 {
+    color: #eeeeee;
+}
+
+body.dark-mode .kf-hero-content p {
+    color: #aaaaaa;
+}
+
+body.dark-mode .kf-hero-btn-outline {
+    color: #84AE92;
+    border-color: #84AE92;
+}
+
+body.dark-mode .kf-hero-btn-outline:hover {
+    background: #84AE92;
+    color: #ffffff;
+}
+
+body.dark-mode .kf-hero-badge {
+    background: rgba(36, 36, 36, 0.95);
+}
+
+body.dark-mode .kf-hero-badge span {
+    color: #eeeeee;
+}
+
+/* =========================================================
+   9. PRODUCT SECTION — THẺ SẢN PHẨM
+
+   Cấu trúc HTML:
+   .kf-product-card
+   ├── .kf-product-card-image  (ảnh + label HOT/NEW + nút tim)
+   │   ├── .kf-product-label   (nhãn HOT hoặc NEW)
+   │   ├── .kf-product-heart   (nút trái tim yêu thích)
+   │   └── img                 (ảnh sản phẩm)
+   └── .kf-product-card-info   (thông tin)
+       ├── .kf-product-brand   (tên thương hiệu)
+       ├── h3                  (tên sản phẩm, có link)
+       ├── .kf-product-rating  (sao + số đánh giá)
+       └── .kf-product-card-bottom (giá + nút giỏ hàng)
+
+   Hover effect:
+   - Card nhảy lên 7px (translateY)
+   - Ảnh zoom nhẹ 6% (scale)
+   - Shadow mở rộng
+========================================================= */
+
+/* --- Vùng chứa toàn bộ section sản phẩm --- */
+.kf-product-section {
+    padding: 75px 0;
+    background-color: #ffffff;
+}
+
+/* --- Tiêu đề section: "Sản phẩm nổiplement" + link "Xem tất cả" --- */
+.kf-product-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.kf-product-heading p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 13px;
+}
+
+/* --- Link "Xem tất cả →" --- */
+.kf-product-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--green-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.kf-product-view-all:hover {
+    color: var(--green-main);
+    transform: translateX(4px);  /* trượt sang phải khi hover */
+}
+
+
+/* --- THẺ SẢN PHẨM (Product Card) ---
+   Được dùng ở: index.html, nike.html, addidas.html,
+   mizuno.html, puma.html, different.html, tunhien.html...
+   Bootstrap grid: col-12 col-sm-6 col-lg-3
+   (1 cột mobile, 2 cột tablet, 4 cột desktop) */
+.kf-product-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e2e9e5;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: card nhảy lên + shadow mở rộng */
+.kf-product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 35px rgba(27, 53, 42, 0.12);
+}
+
+
+/* --- KHU VỰC ẢNH SẢN PHẨM ---
+   height: 400px giữ cho tất cả card đều bằng nhau
+   overflow: hidden để ảnh zoom không tràn ra ngoài
+   position: relative để đặt label + heart đè lên trên */
+.kf-product-card-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background-color: #f4f7f5;
+}
+
+/* Ảnh: cover để lấp đầy khung, transition mượt 0.5s */
+.kf-product-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Khi hover card → ảnh zoom nhẹ 6% */
+.kf-product-card:hover .kf-product-card-image img {
+    transform: scale(1.06);
+}
+
+
+/* --- NHÃN "HOT" hoặc "NEW" ---
+   Nằm góc trái trên, đè lên ảnh
+   z-index: 3 để đè lên heart (cũng z-index: 3 nhưng xếp sau) */
+.kf-product-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3;
+    padding: 5px 9px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--green-dark);
+    font-size: 9px;
+    font-weight: 800;
+}
+
+/* Nhãn "NEW" dùng màu xanh đậm hơn */
+.kf-product-new {
+    background-color: #2c6f5d;
+}
+
+
+/* --- NÚT TRÁI TIM YÊU THÍCH ---
+   Nằm góc phải trên, hình tròn 35x35px
+   JS sẽ toggle class ".liked" khi click
+   → đổi màu đỏ + hiệu ứng-shadow
+   Font Awesome: fa-regular (tim rỗng) ↔ fa-solid (tim đặc) */
+.kf-product-heart {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    color: #555555;
+    background-color: rgba(255, 255, 255, 0.92);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover: tim chuyển đỏ + phóng to nhẹ */
+.kf-product-heart:hover {
+    color: #e74c3c;
+    transform: scale(1.08);
+}
+
+.kf-product-heart:active {
+    transform: scale(0.92);
+}
+
+/* Đã thích: trái tim đỏ đặc hoàn toàn */
+
+.kf-product-heart.liked {
+    color: #e74c3c;
+
+    background-color: #ffeaea;
+
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25);
+}
+
+
+/* --- Trạng thái ĐÃ THÍCH (tim đỏ) ---
+   Khi JS thêm class ".liked" vào nút heart
+   → nền hồng nhạt + shadow đỏ */
+.kf-product-heart.liked {
+    color: #e74c3c;
+    background-color: #ffeaea;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25);
+}
+
+
+/* --- KHU VỰC THÔNG TIN SẢN PHẨM ---
+   Nằm dưới ảnh, chứa brand, tên, rating, giá
+   min-height trên h3 giữ cho tất cả card đều bằng nhau
+   (dù tên sản phẩm dài ngắn khác nhau) */
+.kf-product-card-info {
+    padding: 18px;
+}
+
+/* Tên thương hiệu: "NIKE", "ADIDAS"... */
+.kf-product-brand {
+    color: var(--green-dark);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;  /* chữ cách nhau 1px cho đẹp */
+}
+
+/* Tên sản phẩm — có link <a> bên trong */
+.kf-product-card-info h3 {
+    min-height: 45px;  /* giữ uniform height cho card */
+    margin: 7px 0;
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* --- ĐÁNH GIÁ SAO ---
+   ★★★★★ (24)
+   span = 5 ngôi sao màu vàng
+   small = số đánh giá màu xám */
+.kf-product-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 13px;
+}
+
+/* Ngôi sao vàng */
+.kf-product-rating span {
+    color: #e0ad28;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Số lượng đánh giá */
+.kf-product-rating small {
+    color: #8a948f;
+    font-size: 10px;
+}
+
+
+/* --- GIÁ + NÚT THÊM VÀO GIỎ ---
+   flex với justify-content: space-between
+   → giá nằm trái, nút giỏ hàng nằm phải */
+.kf-product-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Giá tiền: màu xanh đậm, chữ to */
+.kf-product-card-bottom strong {
+    color: var(--green-dark);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Nút giỏ hàng: hình vuông 37x37, màu xanh lá
+   Hover → đổi màu xanh đậm + phóng to nhẹ */
+.kf-product-card-bottom button {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 7px;
+    color: #ffffff;
+    background-color: var(--green-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kf-product-card-bottom button:hover {
+    background-color: var(--green-dark);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   10. BRAND
+========================================================= */
+
+.kf-brand-section {
+    padding: 75px 0;
+
+    background-color: #f5f8f6;
+}
+
+.kf-brand-section .kf-section-heading {
+    margin-bottom: 35px;
+}
+
+.kf-brand-card {
+    width: 100%;
+    min-height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    border: 1px solid #dfe7e2;
+
+    border-radius: 10px;
+
+    color: var(--text-main);
+
+    background-color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.kf-brand-card strong {
+    color: var(--text-main);
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+.kf-brand-card span {
+    margin-top: 5px;
+
+    color: var(--green-dark);
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+.kf-brand-card:hover {
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+
+    border-color: var(--green-dark);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(90, 130, 126, 0.25);
+}
+
+.kf-brand-card:hover strong {
+    color: #ffffff;
+}
+
+.kf-brand-card:hover span {
+    color: var(--green-light);
+}
+
+
+/* =========================================================
+   11. BẠN ĐANG TÌM?
+========================================================= */
+
+.find-section {
+    padding: 50px 20px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 12px;
+}
+
+.find-section .title {
+    margin-bottom: 30px;
+
+    color: var(--text-main);
+
+    font-size: 27px;
+
+    font-weight: 800;
+}
+
+
+/* Card */
+
+.find-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e6e3;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.find-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image */
+
+.find-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border: none;
+
+    border-bottom: 1px solid #eeeeee;
+
+    border-radius: 8px 8px 0 0;
+
+    transition: transform 0.4s ease;
+}
+
+.find-card:hover img {
+    transform: scale(1.02);
+}
+
+
+/* Content */
+
+.find-card-content {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background-color: #ffffff;
+}
+
+
+/* Icon */
+
+.find-card-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background-color: var(--green-main);
+
+    font-size: 19px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Text */
+
+.find-card-text {
+    min-width: 0;
+}
+
+.find-card-text h6 {
+    margin: 0 0 4px;
+
+    color: var(--text-main);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.find-card-text p {
+    margin: 0;
+
+    color: #737d78;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+}
+
+
+/* Arrow */
+
+.find-card-arrow {
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    color: var(--green-dark);
+
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.find-card:hover .find-card-icon {
+    background-color: var(--green-dark);
+
+    transform: scale(1.05);
+}
+
+.find-card:hover .find-card-arrow {
+    color: var(--green-dark);
+
+    transform: translateX(5px);
+}
+
+
+/* Link */
+
+.find-section a,
+.find-section a:hover,
+.find-section a:visited {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   12. NEWSLETTER
+========================================================= */
+
+.newsletter {
+    padding: 65px 20px !important;
+
+    color: #333333;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5A827E,
+            #84AE92,
+            #B9D4AA,
+            #FAFFCA
+        );
+}
+
+.newsletter h3 {
+    margin-bottom: 10px;
+
+    color: #1d2521;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+.newsletter p {
+    margin-bottom: 0;
+
+    color: #405048;
+
+    font-size: 13px;
+}
+
+.newsletter form {
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter input {
+    height: 42px;
+
+    border: 1px solid #dce4df;
+
+    border-radius: 7px;
+
+    padding: 8px 14px;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.newsletter input:focus {
+    border-color: var(--green-dark);
+
+    box-shadow:
+        0 0 0 3px rgba(90, 130, 126, 0.15);
+}
+
+.btn-main {
+    min-width: 100px;
+
+    padding: 8px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    color: #ffffff;
+
+    background-color: #456c67;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+.kf-footer {
+    margin-top: 70px;
+
+    padding: 70px 0 25px;
+
+    color: #ffffff;
+
+    background-color: #111816;
+}
+
+
+/* Logo */
+
+.kf-footer-logo {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.kf-footer-logo span {
+    color: var(--green-main);
+}
+
+
+/* Description */
+
+.kf-footer-description {
+    max-width: 340px;
+
+    margin: 0;
+
+    color: #aab7b0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Heading */
+
+.kf-footer h4 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* List */
+
+.kf-footer ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.kf-footer li {
+    margin-bottom: 11px;
+}
+
+.kf-footer li a {
+    color: #aab7b0;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.kf-footer li a:hover {
+    color: var(--green-light);
+}
+
+
+/* Contact */
+
+.kf-footer-contact {
+    margin: 0 0 12px;
+
+    color: #aab7b0;
+
+    font-size: 14px;
+}
+
+.kf-footer-contact i {
+    width: 22px;
+
+    color: var(--green-light);
+}
+
+
+/* Social */
+
+.kf-footer-social {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.kf-footer-social a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #34423c;
+
+    border-radius: 50%;
+
+    color: #aab7b0;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.kf-footer-social a:hover {
+    color: var(--green-light);
+
+    border-color: var(--green-light);
+
+    transform: translateY(-3px);
+}
+
+
+/* Footer bottom */
+
+.kf-footer-bottom {
+    position: relative;
+
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #29332f;
+
+    color: #7d8b84;
+
+    font-size: 13px;
+}
+
+.kf-footer-bottom-left {
+    flex: 1;
+
+    text-align: left;
+}
+
+
+/* Payment nằm chính giữa */
+
+.kf-footer-payment {
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #aab7b0;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.kf-footer-payment strong {
+    color: #c3cec8;
+
+    font-weight: 500;
+}
+
+.kf-footer-bottom-right {
+    flex: 1;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   14. CART BUTTON
+========================================================= */
+
+.cart-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 75px;
+
+    z-index: 9998;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 125px;
+    height: 45px;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.18);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    color: #ffffff;
+
+    background-color: #456c67;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   15. DARK MODE BUTTON
+========================================================= */
+
+body.dark-mode {
+    color: #eeeeee;
+
+    background-color: #121212;
+}
+
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background-color: #1b1b1b !important;
+
+    border-color: #2c2c2c;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #eeeeee;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link.active {
+    color: var(--green-light);
+}
+
+
+/* Search */
+
+body.dark-mode .navbar form .form-control {
+    color: #ffffff;
+
+    background-color: #282828;
+
+    border-color: #444444;
+}
+
+body.dark-mode .navbar form .form-control:focus {
+    background-color: #303030;
+
+    border-color: var(--green-main);
+}
+
+body.dark-mode .navbar form .form-control::placeholder {
+    color: #999999;
+}
+
+
+/* Dropdown */
+
+body.dark-mode .dropdown-menu {
+    background-color: #242424;
+
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .dropdown-item {
+    color: #eeeeee;
+}
+
+body.dark-mode .dropdown-item:hover {
+    color: var(--green-light);
+
+    background-color: #333333;
+}
+
+
+/* Dark button */
+
+body.dark-mode .dark-mode-btn {
+    color: #eeeeee;
+
+    background-color: #242424;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+}
+
+
+/* Login */
+
+body.dark-mode .btn-login {
+    color: var(--green-light);
+
+    border-color: var(--green-light);
+}
+
+body.dark-mode .btn-login:hover {
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+}
+
+
+/* Signup */
+
+body.dark-mode .btn-signup {
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+}
+
+
+/* Hero */
+
+body.dark-mode .kf-hero {
+    background:
+        linear-gradient(
+            120deg,
+            #17251e,
+            #1d1d1d,
+            #18251e
+        );
+}
+
+body.dark-mode .kf-hero h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .kf-hero p {
+    color: #a8b2ad;
+}
+
+body.dark-mode .kf-hero-secondary {
+    color: var(--green-light);
+
+    background-color: #242424;
+
+    border-color: var(--green-main);
+}
+
+
+/* Product */
+
+body.dark-mode .kf-product-section {
+    background-color: #121212;
+}
+
+body.dark-mode .kf-product-heading h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .kf-product-heading p {
+    color: #9ca7a1;
+}
+
+body.dark-mode .kf-product-card {
+    background-color: #242424;
+
+    border-color: #383838;
+}
+
+body.dark-mode .kf-product-card-image {
+    background-color: #1d1d1d;
+}
+
+body.dark-mode .kf-product-card-info h3 {
+    color: #eeeeee;
+}
+
+body.dark-mode .kf-product-rating small {
+    color: #999999;
+}
+
+body.dark-mode .kf-product-heart {
+    color: #dddddd;
+
+    background-color: #333333;
+}
+
+body.dark-mode .kf-product-heart:hover {
+    color: #e74c3c;
+}
+
+/* Dark mode: trái tim đã thích vẫn đỏ đặc */
+
+body.dark-mode .kf-product-heart.liked {
+    color: #ff6b6b;
+
+    background-color: #3a1f1f;
+}
+
+
+/* Brand */
+
+body.dark-mode .kf-brand-section {
+    background-color: #181818;
+}
+
+body.dark-mode .kf-brand-section .kf-section-heading h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .kf-brand-card {
+    color: #eeeeee;
+
+    background-color: #242424;
+
+    border-color: #383838;
+}
+
+body.dark-mode .kf-brand-card strong {
+    color: #eeeeee;
+}
+
+body.dark-mode .kf-brand-card:hover {
+    color: #ffffff;
+
+    background-color: var(--green-dark);
+}
+
+
+/* Find */
+
+body.dark-mode .find-section {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .find-section .title {
+    color: #ffffff;
+}
+
+body.dark-mode .find-card {
+    background-color: #242424;
+
+    border-color: #383838;
+}
+
+body.dark-mode .find-card-content {
+    background-color: #242424;
+}
+
+body.dark-mode .find-card-text h6 {
+    color: #eeeeee;
+}
+
+body.dark-mode .find-card-text p {
+    color: #a2aaa5;
+}
+
+body.dark-mode .find-card-arrow {
+    color: var(--green-light);
+}
+
+
+/* Newsletter */
+
+body.dark-mode .newsletter {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #19372b,
+            #285943,
+            #355e49
+        );
+}
+
+body.dark-mode .newsletter h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .newsletter p {
+    color: #c0cbc4;
+}
+
+body.dark-mode .newsletter input {
+    color: #ffffff;
+
+    background-color: #242424;
+
+    border-color: #444444;
+}
+
+body.dark-mode .newsletter input::placeholder {
+    color: #999999;
+}
+
+
+/* Filter */
+
+body.dark-mode .filter-toggle {
+    background-color: #242424;
+
+    border-color: var(--green-main);
+}
+
+body.dark-mode .filter-toggle span {
+    background-color: #eeeeee;
+}
+
+body.dark-mode .filter-panel,
+body.dark-mode .submenu-panel {
+    color: #eeeeee;
+
+    background-color: #242424;
+}
+
+body.dark-mode .filter-title,
+body.dark-mode #submenuTitle,
+body.dark-mode .filter-menu li,
+body.dark-mode .filter-option,
+body.dark-mode .filter-option span {
+    color: #eeeeee;
+}
+
+body.dark-mode .filter-menu li:hover {
+    background-color: #333333;
+}
+
+
+/* Footer */
+
+body.dark-mode .kf-footer {
+    background-color: #080808;
+}
+
+body.dark-mode .kf-footer-description,
+body.dark-mode .kf-footer-contact,
+body.dark-mode .kf-footer li a {
+    color: #aebbb5;
+}
+
+body.dark-mode .kf-footer-payment {
+    color: #aebbb5;
+}
+
+body.dark-mode .kf-footer-payment strong {
+    color: var(--green-soft);
+}
+
+
+/* Cart */
+
+body.dark-mode .cart-btn {
+    background-color: var(--green-dark);
+}
+
+
+/* =========================================================
+   16. SMOOTH TRANSITION
+========================================================= */
+
+.navbar,
+.navbar form .form-control,
+.kf-hero,
+.kf-product-section,
+.kf-product-card,
+.kf-brand-section,
+.kf-brand-card,
+.find-section,
+.find-card,
+.find-card-content,
+.newsletter,
+.kf-footer,
+.filter-panel,
+.submenu-panel,
+.dropdown-menu {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}

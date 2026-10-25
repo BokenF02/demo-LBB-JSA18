@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giỏ hàng – Khang Football</title>
+
+    <!-- ============ GOOGLE FONT: BE VIETNAM PRO (giống các trang khác) ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ============ FONT AWESOME (icon) ============ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- ============ CSS GIỎ HÀNG ============ -->
+    <link rel="stylesheet" href="./CSS/cart.css" />
+  </head>
+
+  <body>
+    <!-- =========================================================
+         THANH TRÊN CÙNG: LOGO + NÚT QUAY LẠI
+    ========================================================== -->
+    <header class="topbar">
+      <a href="./index.html" class="topbar-logo">
+        <img src="./images/logo.png" alt="Khang Football" />
+      </a>
+
+      <div class="topbar-actions">
+        <!-- NÚT DARK MODE (giống các trang khác) -->
+        <button id="darkModeBtn" class="dark-mode-btn" type="button">
+          <i class="fa-solid fa-moon"></i>
+          <span>Dark</span>
+        </button>
+
+        <a href="./index.html" class="topbar-back">
+          <i class="fa-solid fa-arrow-left"></i>
+          Tiếp tục mua sắm
+        </a>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         TIÊU ĐỀ TRANG
+    ========================================================== -->
+    <section class="page-title">
+      <h1>Giỏ hàng của bạn</h1>
+      <p><span id="itemsCount">3</span> sản phẩm đang chờ thanh toán</p>
+    </section>
+
+    <!-- =========================================================
+         NỘI DUNG CHÍNH: SẢN PHẨM (TRÁI) + TÓM TẮT (PHẢI)
+    ========================================================== -->
+    <main class="cart-layout">
+      <!-- CỘT TRÁI: DANH SÁCH SẢN PHẨM -->
+      <section class="cart-list">
+        <!-- SẢN PHẨM 1 -->
+        <article class="cart-item" data-price="1100000">
+          <img
+            class="cart-item-img"
+            src="./images/mizuno/2.jpg"
+            alt="Mizuno Morelia Neo III Pro"
+          />
+
+          <div class="item-info">
+            <span class="item-brand">Mizuno</span>
+            <h4 class="item-name">Morelia Neo III Pro</h4>
+            <p class="item-meta">
+              Size 41 • Đơn giá <strong>1.100.000đ</strong>
+            </p>
+          </div>
+
+          <div class="quantity">
+            <button
+              type="button"
+              class="qty-btn minus"
+              aria-label="Giảm số lượng"
+            >
+              -
+            </button>
+            <input
+              type="text"
+              class="qty-input"
+              value="1"
+              aria-label="Số lượng"
+            />
+            <button
+              type="button"
+              class="qty-btn plus"
+              aria-label="Tăng số lượng"
+            >
+              +
+            </button>
+          </div>
+
+          <div class="item-subtotal">1.100.000đ</div>
+
+          <button type="button" class="remove" aria-label="Xóa sản phẩm">
+            &times;
+          </button>
+        </article>
+
+        <!-- SẢN PHẨM 2 -->
+        <article class="cart-item" data-price="1100000">
+          <img
+            class="cart-item-img"
+            src="./images/adidas/5.jpg"
+            alt="Adidas X Speedportal"
+          />
+
+          <div class="item-info">
+            <span class="item-brand">Adidas</span>
+            <h4 class="item-name">X Speedportal</h4>
+            <p class="item-meta">
+              Size 40 • Đơn giá <strong>1.100.000đ</strong>
+            </p>
+          </div>
+
+          <div class="quantity">
+            <button
+              type="button"
+              class="qty-btn minus"
+              aria-label="Giảm số lượng"
+            >
+              −
+            </button>
+            <input
+              type="text"
+              class="qty-input"
+              value="1"
+              aria-label="Số lượng"
+            />
+            <button
+              type="button"
+              class="qty-btn plus"
+              aria-label="Tăng số lượng"
+            >
+              +
+            </button>
+          </div>
+
+          <div class="item-subtotal">1.100.000đ</div>
+
+          <button type="button" class="remove" aria-label="Xóa sản phẩm">
+            &times;
+          </button>
+        </article>
+
+        <!-- SẢN PHẨM 3 -->
+        <article class="cart-item" data-price="1100000">
+          <img
+            class="cart-item-img"
+            src="./images/nhan tao/4.jpg"
+            alt="NMS Spider 2.0 TF"
+          />
+
+          <div class="item-info">
+            <span class="item-brand">NMS</span>
+            <h4 class="item-name">Spider 2.0 TF</h4>
+            <p class="item-meta">
+              Size 42 • Đơn giá <strong>1.100.000đ</strong>
+            </p>
+          </div>
+
+          <div class="quantity">
+            <button
+              type="button"
+              class="qty-btn minus"
+              aria-label="Giảm số lượng"
+            >
+              −
+            </button>
+            <input
+              type="text"
+              class="qty-input"
+              value="1"
+              aria-label="Số lượng"
+            />
+            <button
+              type="button"
+              class="qty-btn plus"
+              aria-label="Tăng số lượng"
+            >
+              +
+            </button>
+          </div>
+
+          <div class="item-subtotal">1.100.000đ</div>
+
+          <button type="button" class="remove" aria-label="Xóa sản phẩm">
+            &times;
+          </button>
+        </article>
+      </section>
+
+      <!-- CỘT PHẢI: TÓM TẮT ĐƠN HÀNG -->
+      <aside class="summary">
+        <h3>Tóm tắt đơn hàng</h3>
+
+        <div class="summary-content">
+          <div class="summary-row">
+            <span>Sản phẩm</span>
+            <span id="sumItems">3</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Tạm tính</span>
+            <span id="subtotal">3.300.000đ</span>
+          </div>
+
+          <div class="summary-field">
+            <label for="shipping"
+              ><i class="fa-solid fa-truck"></i> Phí vận chuyển</label
+            >
+            <select id="shipping">
+              <option value="30000">Tiết kiệm — 30.000đ</option>
+              <option value="50000">Nhanh — 50.000đ</option>
+            </select>
+          </div>
+
+          <div class="summary-field">
+            <label for="giftcode"
+              ><i class="fa-solid fa-ticket"></i> Mã giảm giá</label
+            >
+            <div class="gift-row">
+              <input
+                id="giftcode"
+                type="text"
+                placeholder="Nhập mã (thử: KHANG10)"
+              />
+              <button type="button" id="giftBtn" class="gift-btn">
+                Áp dụng
+              </button>
+            </div>
+            <p class="gift-msg" id="giftMsg"></p>
+          </div>
+
+          <div class="discount-row" id="discountRow" style="display: none">
+            <span>Giảm giá (10%)</span>
+            <span id="discount">-0đ</span>
+          </div>
+
+          <div class="summary-total">
+            <span>Tổng cộng</span>
+            <strong id="grandTotal">3.330.000đ</strong>
+          </div>
+        </div>
+
+        <a href="./lg-su.html" class="checkout-link">
+          <button class="checkout" type="button">
+            <i class="fa-solid fa-lock"></i>
+            Tiến hành thanh toán
+          </button>
+        </a>
+
+        <p class="checkout-note">Bấm để đến trang đăng nhập (bản demo)</p>
+      </aside>
+    </main>
+
+    <!-- =========================================================
+         PHƯƠNG THỨC THANH TOÁN
+    ========================================================== -->
+    <section class="payment-methods">
+      <span>Phương thức thanh toán:</span>
+      <div class="payment-badges">
+        <span class="badge">VISA</span>
+        <span class="badge">MasterCard</span>
+        <span class="badge">MoMo</span>
+        <span class="badge">ZaloPay</span>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer class="cart-footer">
+      © 2026 Khang Football • Đam mê • Sân cỏ • Phong cách
+    </footer>
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+    <script src="./JS/script.js"></script>
+    <script src="./JS/cart.js"></script>
+  </body>
+</html>

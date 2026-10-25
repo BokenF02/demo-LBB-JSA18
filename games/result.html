@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <!-- =================================
+         CẤU HÌNH
+    ================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kết quả - Khang Football</title>
+
+
+    <!-- =================================
+         KẾT NỐI FONT AWESOME
+    ================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =================================
+         KẾT NỐI CSS
+
+         result.html nằm trong games
+         result.css nằm trong CSS
+
+         Vì vậy phải dùng ../
+    ================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../CSS/result.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         KHUNG KẾT QUẢ
+    ================================= -->
+
+    <main class="result-container">
+
+
+        <!-- =================================
+             TIÊU ĐỀ
+        ================================= -->
+
+        <header class="result-header">
+
+            <h1>
+                KẾT QUẢ
+            </h1>
+
+            <p id="resultMessage">
+                Chúc mừng bạn đã hoàn thành thử thách!
+            </p>
+
+        </header>
+
+
+        <!-- =================================
+             THÔNG BÁO
+        ================================= -->
+
+        <section
+            class="result-notice"
+            id="resultNotice"
+        >
+
+            <div
+                class="notice-icon"
+                id="noticeIcon"
+            >
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </div>
+
+
+            <div class="notice-content">
+
+                <h2 id="noticeTitle">
+                    Chúc mừng!
+                </h2>
+
+                <p id="noticeText">
+                    Bạn đã hoàn thành thử thách.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             BẢNG KẾT QUẢ
+
+             2/3 = thống kê
+             1/3 = phần thưởng
+        ================================= -->
+
+        <div class="result-box">
+
+
+            <!-- =================================
+                 THỐNG KÊ
+            ================================= -->
+
+            <section class="statistics">
+
+                <h2>
+                    Thống kê kết quả
+                </h2>
+
+
+                <!-- CÂU ĐÚNG -->
+
+                <div class="stat-item">
+
+                    <div class="stat-icon correct">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Câu đúng
+                        </span>
+
+                        <strong id="correct">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CÂU SAI -->
+
+                <div class="stat-item">
+
+                    <div class="stat-icon wrong">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Câu sai
+                        </span>
+
+                        <strong id="wrong">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THỜI GIAN -->
+
+                <div class="stat-item">
+
+                    <div class="stat-icon time">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Thời gian
+                        </span>
+
+                        <strong id="time">
+                            0 giây
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ĐIỂM -->
+
+                <div class="score-box">
+
+                    <span>
+                        Điểm của bạn
+                    </span>
+
+                    <strong>
+
+                        <span id="score">
+                            0
+                        </span>
+
+                        <small>
+                            /10
+                        </small>
+
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PHẦN THƯỞNG
+            ================================= -->
+
+            <section
+                class="reward"
+                id="rewardSection"
+            >
+
+                <!-- Logo năm / phần thưởng
+                     nằm góc trái -->
+
+                <div class="reward-logo">
+
+                    <i class="fa-solid fa-gift"></i>
+
+                </div>
+
+
+                <h2>
+                    Phần thưởng
+                </h2>
+
+
+                <p class="reward-description">
+
+                    Bạn nhận được mã giảm giá
+                    đặc biệt từ Khang Football!
+
+                </p>
+
+
+                <!-- JS tạo vòng tròn -->
+
+                <div
+                    class="reward-list"
+                    id="rewardList"
+                >
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================
+             HAI NÚT
+        ================================= -->
+
+        <div class="result-buttons">
+
+
+            <!-- VỀ TRANG CHỦ -->
+
+            <button
+                class="btn-home"
+                id="homeBtn"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                Về trang chủ
+
+            </button>
+
+
+            <!-- CHƠI LẠI -->
+
+            <button
+                class="btn-retry"
+                id="retryBtn"
+            >
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Chơi lại
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =================================
+         KẾT NỐI JAVASCRIPT
+
+         result.html nằm trong games
+         result.js nằm trong JS
+
+         Vì vậy phải dùng ../
+    ================================= -->
+
+    <script src="../JS/result.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thuyết trình — Khang Football</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="./css/pstyle.css" />
+  </head>
+  <body>
+    <!-- Navigation Arrows -->
+    <button
+      class="nav-arrow left disabled"
+      id="prevBtn"
+      onclick="changeSlide(-1)"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="nav-arrow right" id="nextBtn" onclick="changeSlide(1)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Slide counter -->
+    <div class="slide-counter" id="slideCounter"></div>
+
+    <!-- ============================================================
+     SLIDES — 10 slides
+============================================================ -->
+    <div class="slides-wrapper" id="slidesWrapper">
+      <!-- ===================== SLIDE 1: GIỚI THIỆU BẢN THÂN ===================== -->
+      <div class="slide active">
+        <div class="slide-inner title-slide">
+          <span class="slide-label">Thuyết trình dự án</span>
+          <h1>KHANG <span>FOOTBALL</span></h1>
+          <p class="subtitle">Website bán giày bóng đá và phụ kiện thể thao</p>
+          <div class="meta">
+            <span><i class="fa-solid fa-user"></i> Đặng Bảo Khang</span>
+            <span><i class="fa-solid fa-calendar"></i> 2026</span>
+            <span
+              ><i class="fa-solid fa-code"></i> HTML / CSS / JavaScript
+              thuần</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 2: MỤC LỤC ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">01 — Mục lục</span>
+          <h2>Nội dung <span>thuyết trình</span></h2>
+
+          <div class="card-grid cols-2" style="margin-top: 28px">
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">1. Giới thiệu bản thân</h3>
+                <p style="font-size: 13px">Thông tin tác giả dự án</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">2. Giới thiệu dự án</h3>
+                <p style="font-size: 13px">Tổng quan và mục tiêu</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">3. Ý tưởng dự án</h3>
+                <p style="font-size: 13px">Nguồn cảm hứng và mục đích</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-timeline"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">4. Quá trình thực hiện</h3>
+                <p style="font-size: 13px">4 tuần phát triển chi tiết</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">5. Các trang trong website</h3>
+                <p style="font-size: 13px">Tổng quan từng trang</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-play-circle"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">6. Demo sản phẩm</h3>
+                <p style="font-size: 13px">Trực quan giao diện</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">7. Ưu điểm & Nhược điểm</h3>
+                <p style="font-size: 13px">Đánh giá khách quan</p>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="display: flex; align-items: center; gap: 16px"
+            >
+              <div class="icon" style="margin: 0; flex-shrink: 0">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 16px">8. Phát triển tương lai</h3>
+                <p style="font-size: 13px">Hướng phát triển tiếp theo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 3: GIỚI THIỆU DỰ ÁN ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">02 — Giới thiệu dự án</span>
+          <h2>Dự án <span>Khang Football</span></h2>
+
+          <div class="card-grid cols-4" style="margin-top: 32px">
+            <div class="card" style="text-align: center; padding: 28px 16px">
+              <div class="icon" style="margin: 0 auto 14px; width: 56px; height: 56px; font-size: 24px">
+                <i class="fa-solid fa-file-code"></i>
+              </div>
+              <h3 style="font-size: 28px; margin-bottom: 6px">24</h3>
+              <p style="font-size: 14px">File HTML</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 28px 16px">
+              <div class="icon" style="margin: 0 auto 14px; width: 56px; height: 56px; font-size: 24px">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h3 style="font-size: 28px; margin-bottom: 6px">12</h3>
+              <p style="font-size: 14px">File CSS</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 28px 16px">
+              <div class="icon" style="margin: 0 auto 14px; width: 56px; height: 56px; font-size: 24px">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h3 style="font-size: 28px; margin-bottom: 6px">5</h3>
+              <p style="font-size: 14px">File JavaScript</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 28px 16px">
+              <div class="icon" style="margin: 0 auto 14px; width: 56px; height: 56px; font-size: 24px">
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </div>
+              <h3 style="font-size: 28px; margin-bottom: 6px">3</h3>
+              <p style="font-size: 14px">Component tái sử dụng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 4: Ý TƯỞNG ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">03 — Ý tưởng dự án</span>
+          <h2>Nguồn <span>cảm hứng</span></h2>
+
+          <div class="card-grid cols-3" style="margin-top: 36px">
+            <div class="card" style="padding: 28px 20px">
+              <div class="icon" style="width: 52px; height: 52px; font-size: 22px; margin-bottom: 14px">
+                <i class="fa-solid fa-futbol"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 8px">Đam mê bóng đá</h3>
+              <p style="font-size: 14px; line-height: 1.7">
+                Mong muốn thiết kế website giúp kiếm tiền từ đam mê
+              </p>
+            </div>
+            <div class="card" style="padding: 28px 20px">
+              <div class="icon" style="width: 52px; height: 52px; font-size: 22px; margin-bottom: 14px">
+                <i class="fa-solid fa-paintbrush"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 8px">Mẫu sản phẩm</h3>
+              <p style="font-size: 14px; line-height: 1.7">
+                Thiết kế và lấy ý tưởng giao diện chức năng giống Neymarsport
+              </p>
+            </div>
+            <div class="card" style="padding: 28px 20px">
+              <div class="icon" style="width: 52px; height: 52px; font-size: 22px; margin-bottom: 14px">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 8px">Thực hành</h3>
+              <p style="font-size: 14px; line-height: 1.7">
+                Áp dụng những kiến thức đã được học vào thực tế
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 5: QUÁ TRÌNH LÀM DỰ ÁN ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">04 — Quá trình thực hiện</span>
+          <h2>4 tuần <span>phát triển</span></h2>
+
+          <div class="card-grid cols-4" style="margin-top: 28px">
+            <!-- Tuần 1 -->
+            <div class="card" style="padding: 28px 20px">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(132, 174, 146, 0.2); display: flex; align-items: center; justify-content: center; color: #84ae92; font-weight: 800; font-size: 16px">1</div>
+                <h3 style="font-size: 16px; margin: 0">Tuần 1</h3>
+              </div>
+              <h4 style="font-size: 14px; font-weight: 700; color: #84ae92; line-height: 1.6">Làm thêm bảng lọc</h4>
+            </div>
+            <!-- Tuần 2 -->
+            <div class="card" style="padding: 28px 20px">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(132, 174, 146, 0.2); display: flex; align-items: center; justify-content: center; color: #84ae92; font-weight: 800; font-size: 16px">2</div>
+                <h3 style="font-size: 16px; margin: 0">Tuần 2</h3>
+              </div>
+              <h4 style="font-size: 14px; font-weight: 700; color: #84ae92; line-height: 1.6">Thiết kế chức năng Dark Mode</h4>
+            </div>
+            <!-- Tuần 3 -->
+            <div class="card" style="padding: 28px 20px">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(132, 174, 146, 0.2); display: flex; align-items: center; justify-content: center; color: #84ae92; font-weight: 800; font-size: 16px">3</div>
+                <h3 style="font-size: 16px; margin: 0">Tuần 3</h3>
+              </div>
+              <h4 style="font-size: 14px; font-weight: 700; color: #84ae92; line-height: 1.6">Hoàn thành thêm 2 file về tin tức và hỗ trợ</h4>
+            </div>
+            <!-- Tuần 4 -->
+            <div class="card" style="padding: 28px 20px">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(132, 174, 146, 0.2); display: flex; align-items: center; justify-content: center; color: #84ae92; font-weight: 800; font-size: 16px">4</div>
+                <h3 style="font-size: 16px; margin: 0">Tuần 4</h3>
+              </div>
+              <h4 style="font-size: 14px; font-weight: 700; color: #84ae92; line-height: 1.6">Hoàn thiện tính năng Components và bài thuyết trình</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 6: CÁC TRANG TRONG WEBSITE ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">05 — Các trang trong website</span>
+          <h2>Cấu trúc <span>website</span></h2>
+
+          <div class="card-grid cols-3" style="margin-top: 22px">
+            <!-- Ô 1: Trang chủ và các tính năng -->
+            <div class="card">
+              <div class="icon"><i class="fa-solid fa-house"></i></div>
+              <h3>Trang chủ và các tính năng</h3>
+              <ul class="feature-list">
+                <li>index.html — Trang chủ</li>
+                <li>cart.html — Giỏ hàng</li>
+                <li>lg-su.html — Đăng nhập / Đăng ký</li>
+                <li>help.html — Trợ giúp</li>
+                <li>games/quiz.html — Quiz bóng đá</li>
+                <li>news/home.html — Tin tức</li>
+                <li>product-detail.html — Chi tiết SP</li>
+              </ul>
+            </div>
+            <!-- Ô 2: Trang thương hiệu -->
+            <div class="card">
+              <div class="icon"><i class="fa-solid fa-tags"></i></div>
+              <h3>Trang thương hiệu</h3>
+              <ul class="feature-list">
+                <li>nike.html — Giày Nike</li>
+                <li>addidas.html — Giày Adidas</li>
+                <li>mizuno.html — Giày Mizuno</li>
+                <li>puma.html — Giày Puma</li>
+              </ul>
+            </div>
+            <!-- Ô 3: Trang bán phụ kiện -->
+            <div class="card">
+              <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3>Trang bán các phụ kiện khác</h3>
+              <ul class="feature-list">
+                <li>tunhien.html — Sân tự nhiên</li>
+                <li>nhantao.html — Sân nhân tạo</li>
+                <li>trongnha.html — Sân trong nhà</li>
+                <li>different.html — Phụ kiện</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 20px;
+              padding: 14px 20px;
+              background: rgba(132, 174, 146, 0.08);
+              border-radius: 10px;
+              border: 1px solid rgba(132, 174, 146, 0.15);
+            "
+          >
+            <p style="font-size: 14px; margin: 0">
+              <i class="fa-solid fa-puzzle-piece" style="color: #84ae92"></i>
+              <strong style="color: #e6edf3"> Component System:</strong>
+              <span style="color: #aab7b0"
+                >Navbar, Footer, Filter được tái sử dụng qua 11 trang. Chỉ cần
+                sửa 1 file component là tất cả trang tự cập nhật.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 7: DEMO ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">06 — Demo sản phẩm</span>
+          <h2>Giao diện <span>trực quan</span></h2>
+
+          <div class="two-col" style="margin-top: 18px; gap: 24px">
+            <!-- Cột trái: Trang chủ -->
+            <div>
+              <h3 style="font-size: 16px; margin-bottom: 12px; color: #84ae92">
+                Trang chủ
+              </h3>
+              <div
+                style="
+                  border-radius: 12px;
+                  overflow: hidden;
+                  border: 1px solid rgba(132, 174, 146, 0.2);
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                "
+              >
+                <img
+                  src="../images/sigma.jpg"
+                  alt="Hero section"
+                  style="width: 100%; height: 200px; object-fit: contain; background: #0d1117"
+                />
+              </div>
+              <div
+                style="
+                  border-radius: 12px;
+                  overflow: hidden;
+                  border: 1px solid rgba(132, 174, 146, 0.2);
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                  margin-top: 10px;
+                "
+              >
+                <img
+                  src="../images/hotprd/1.jpg"
+                  alt="Product cards"
+                  style="width: 100%; height: 180px; object-fit: contain; background: #0d1117"
+                />
+              </div>
+            </div>
+            <!-- Cột phải: Trang thương hiệu + Cart -->
+            <div>
+              <h3 style="font-size: 16px; margin-bottom: 12px; color: #84ae92">
+                Trang thương hiệu
+              </h3>
+              <div
+                style="
+                  border-radius: 12px;
+                  overflow: hidden;
+                  border: 1px solid rgba(132, 174, 146, 0.2);
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                "
+              >
+                <img
+                  src="../images/banner/nike.jpg"
+                  alt="Nike page"
+                  style="width: 100%; height: 180px; object-fit: contain; background: #0d1117"
+                />
+              </div>
+
+              <h3 style="font-size: 16px; margin: 16px 0 12px; color: #84ae92">
+                Product Cards
+              </h3>
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
+              >
+                <div
+                  style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1px solid rgba(132, 174, 146, 0.2);
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    src="../images/hotprd/2.jpg"
+                    alt="Product 2"
+                    style="width: 100%; height: 130px; object-fit: contain; background: #0d1117"
+                  />
+                </div>
+                <div
+                  style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1px solid rgba(132, 174, 146, 0.2);
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    src="../images/hotprd/3.jpg"
+                    alt="Product 3"
+                    style="width: 100%; height: 130px; object-fit: contain; background: #0d1117"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-grid cols-3" style="margin-top: 18px">
+            <div class="card" style="text-align: center">
+              <div class="icon" style="margin: 0 auto 8px">
+                <i class="fa-solid fa-moon"></i>
+              </div>
+              <h3 style="font-size: 14px">Dark Mode</h3>
+              <p style="font-size: 12px">Chế độ tối với localStorage</p>
+            </div>
+            <div class="card" style="text-align: center">
+              <div class="icon" style="margin: 0 auto 8px">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+              <h3 style="font-size: 14px">Product Filter</h3>
+              <p style="font-size: 12px">Bộ lọc 2 panel animation</p>
+            </div>
+            <div class="card" style="text-align: center">
+              <div class="icon" style="margin: 0 auto 8px">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <h3 style="font-size: 14px">Giỏ hàng</h3>
+              <p style="font-size: 12px">Mã giảm giá + phí ship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 8: ƯU ĐIỂM & NHƯỢC ĐIỂM ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">07 — Ưu điểm & Nhược điểm</span>
+          <h2>Đánh giá <span>khách quan</span></h2>
+
+          <div class="two-col" style="margin-top: 24px; gap: 30px">
+            <!-- Ưu điểm -->
+            <div>
+              <h3 style="color: #84ae92; margin-bottom: 16px">
+                <i class="fa-solid fa-circle-check"></i> Ưu điểm
+              </h3>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Component tái sử dụng</h3>
+              </div>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Cấu trúc code gọn gàng, dễ bảo trì</h3>
+              </div>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Dark Mode với localStorage</h3>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 15px">Responsive tốt</h3>
+              </div>
+            </div>
+            <!-- Nhược điểm -->
+            <div>
+              <h3 style="color: #ff7b72; margin-bottom: 16px">
+                <i class="fa-solid fa-circle-xmark"></i> Nhược điểm
+              </h3>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Website tĩnh (Static)</h3>
+              </div>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Load chậm do CDN</h3>
+              </div>
+              <div class="card" style="margin-bottom: 12px">
+                <h3 style="font-size: 15px">Dữ liệu hardcode</h3>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 15px">Chưa có thanh toán thật</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 9: PHÁT TRIỂN TƯƠNG LAI ===================== -->
+      <div class="slide">
+        <div class="slide-inner">
+          <span class="slide-label">08 — Phát triển tương lai</span>
+          <h2>Hướng <span>phát triển</span></h2>
+
+          <div class="card-grid cols-2" style="margin-top: 28px; max-width: 700px; margin-left: auto; margin-right: auto">
+            <div class="card" style="padding: 24px 20px">
+              <div class="icon" style="width: 50px; height: 50px; font-size: 20px; margin-bottom: 12px">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 6px">Thanh toán trực tuyến</h3>
+            </div>
+            <div class="card" style="padding: 24px 20px">
+              <div class="icon" style="width: 50px; height: 50px; font-size: 20px; margin-bottom: 12px">
+                <i class="fa-solid fa-user-lock"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 6px">Xác thực người dùng</h3>
+            </div>
+            <div class="card" style="padding: 24px 20px">
+              <div class="icon" style="width: 50px; height: 50px; font-size: 20px; margin-bottom: 12px">
+                <i class="fa-solid fa-link"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 6px">Tạo ra sự kết nối giữa khách hàng</h3>
+            </div>
+            <div class="card" style="padding: 24px 20px">
+              <div class="icon" style="width: 50px; height: 50px; font-size: 20px; margin-bottom: 12px">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <h3 style="font-size: 17px; margin-bottom: 6px">Ứng dụng di động</h3>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 20px;
+              padding: 14px 20px;
+              background: rgba(132, 174, 146, 0.08);
+              border-radius: 10px;
+              border: 1px solid rgba(132, 174, 146, 0.15);
+            "
+          >
+            <p style="font-size: 14px; margin: 0">
+              <i class="fa-solid fa-flag-checkered" style="color: #84ae92"></i>
+              <strong style="color: #e6edf3"> Mục tiêu:</strong>
+              <span style="color: #aab7b0"
+                >Biến Khang Football từ website demo thành nền tảng thương mại
+                điện tử bóng đá thực thụ tại Việt Nam.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== SLIDE 10: LỜI CẢM ƠN ===================== -->
+      <div class="slide">
+        <div class="slide-inner title-slide">
+          <span class="slide-label">Kết thúc</span>
+          <h1>Lời <span>cảm ơn</span></h1>
+          <p class="subtitle" style="max-width: 500px; margin: 0 auto 30px">
+            Cảm ơn quý thầy cô và các bạn đã lắng nghe. Rất mong nhận được phản
+            hồi và góp ý để dự án ngày càng hoàn thiện hơn.
+          </p>
+          <div class="meta">
+            <span><i class="fa-solid fa-user"></i> Đặng Bảo Khang</span>
+            <span
+              ><i class="fa-solid fa-envelope"></i>
+              dangbaokhang57@gmail.com</span
+            >
+            <span><i class="fa-solid fa-code"></i> Khang Football — 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /slides-wrapper -->
+
+    <!-- JS riêng -->
+    <script src="./js/pscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,653 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background-color: #95D5B2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* =================================
+   KHUNG QUIZ
+================================= */
+
+.quiz-box {
+
+    width: 600px;
+
+    height: 590px;
+
+    background-color: #ffffff;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.quiz-header {
+
+    height: 75px;
+
+    min-height: 75px;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* Tiêu đề */
+
+.quiz-header h2 {
+
+    font-size: 25px;
+
+    color: #222222;
+
+}
+
+
+/* =================================
+   Ô THỜI GIAN
+================================= */
+
+.time-box {
+
+    padding: 8px 10px;
+
+    background-color: #e2f3e9;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* Chữ thời gian */
+
+.time-box span {
+
+    font-size: 16px;
+
+    color: #4f8067;
+
+}
+
+
+/* Số giây */
+
+.time-box strong {
+
+    min-width: 42px;
+
+    padding: 7px 8px;
+
+    background-color: #333333;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+}
+
+
+/* =================================
+   THANH THỜI GIAN
+================================= */
+
+.time-bar {
+
+    width: 100%;
+
+    height: 5px;
+
+    min-height: 5px;
+
+    background-color: #eeeeee;
+
+}
+
+
+/*
+    Thanh này sẽ được JavaScript
+    làm giảm width từ 100% → 0%.
+*/
+
+.time-progress {
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #2eaf5d;
+
+    transition:
+        width 1s linear,
+        background-color 0.5s ease;
+
+}
+
+
+/* =================================
+   NỘI DUNG QUIZ
+================================= */
+
+.quiz-content {
+
+    height: 435px;
+
+    min-height: 435px;
+
+    padding: 30px 32px;
+
+    overflow: hidden;
+
+}
+
+
+/* =================================
+   CÂU HỎI
+================================= */
+
+.question {
+
+    height: 75px;
+
+    min-height: 75px;
+
+    margin-bottom: 28px;
+
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    color: #222222;
+
+}
+
+
+/* =================================
+   DANH SÁCH ĐÁP ÁN
+================================= */
+
+.answer-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+/* =================================
+   ĐÁP ÁN
+================================= */
+
+.answer {
+
+    width: 100%;
+
+    height: 48px;
+
+    min-height: 48px;
+
+    padding: 0 15px;
+
+    background-color: #f5fbf7;
+
+    color: #365443;
+
+    border: 2px solid #c4e5d2;
+
+    border-radius: 5px;
+
+    font-size: 17px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    transition: all 0.2s ease;
+
+}
+
+
+/* =================================
+   HOVER ĐÁP ÁN
+================================= */
+
+.answer:hover:not(:disabled) {
+
+    background-color: #dff3e7;
+
+    border-color: #95D5B2;
+
+}
+
+
+/* =================================
+   ĐÁP ÁN BỊ KHÓA
+================================= */
+
+.answer:disabled {
+
+    cursor: default;
+
+}
+
+
+/* =================================
+   KHU VỰC ✓ / ✕
+================================= */
+
+.answer-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   ĐÁP ÁN ĐÚNG
+================================= */
+
+.answer.correct {
+
+    background-color: #e5f7eb;
+
+    border-color: #2eaf5d;
+
+}
+
+
+.answer.correct .answer-icon {
+
+    color: #2eaf5d;
+
+}
+
+
+/* =================================
+   ĐÁP ÁN SAI
+================================= */
+
+.answer.wrong {
+
+    background-color: #fff0f0;
+
+    border-color: #e74c3c;
+
+}
+
+
+.answer.wrong .answer-icon {
+
+    color: #e74c3c;
+
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.quiz-footer {
+
+    height: 75px;
+
+    min-height: 75px;
+
+    padding: 15px 30px;
+
+    border-top: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* =================================
+   KHU VỰC HAI NÚT
+================================= */
+
+/*
+    Hai nút đều nằm trong cùng một vị trí.
+*/
+
+.quiz-buttons {
+
+    width: 130px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =================================
+   NÚT TIẾP THEO
+================================= */
+
+.next-btn {
+
+    display: none;
+
+    padding: 11px 20px;
+
+    background-color: #95D5B2;
+
+    color: #ffffff;
+
+    border: 2px solid #95D5B2;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+
+}
+
+
+/* Hover */
+
+.next-btn:hover {
+
+    background-color: #ffffff;
+
+    color: #95D5B2;
+
+}
+
+
+/* =================================
+   NÚT LÀM LẠI
+================================= */
+
+.retry-btn {
+
+    display: none;
+
+    padding: 11px 20px;
+
+    background-color: #e74c3c;
+
+    color: #ffffff;
+
+    border: 2px solid #e74c3c;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+
+}
+
+
+/* Hover */
+
+.retry-btn:hover {
+
+    background-color: #ffffff;
+
+    color: #e74c3c;
+
+}
+
+
+/* =================================
+   SỐ CÂU HỎI
+================================= */
+
+.question-number {
+
+    font-size: 16px;
+
+    color: #333333;
+
+}
+
+
+/* =================================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 768px) {
+
+    .quiz-box {
+
+        width: 90%;
+
+        height: 590px;
+
+    }
+
+
+    .question {
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE - ĐIỆN THOẠI
+================================= */
+
+@media (max-width: 576px) {
+
+    .quiz-box {
+
+        width: 92%;
+
+        height: 570px;
+
+    }
+
+
+    .quiz-header {
+
+        height: 70px;
+
+        min-height: 70px;
+
+        padding: 14px 18px;
+
+    }
+
+
+    .quiz-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .time-box {
+
+        padding: 6px 7px;
+
+        gap: 6px;
+
+    }
+
+
+    .time-box span {
+
+        font-size: 13px;
+
+    }
+
+
+    .time-box strong {
+
+        min-width: 35px;
+
+        padding: 6px;
+
+        font-size: 16px;
+
+    }
+
+
+    .quiz-content {
+
+        height: 425px;
+
+        min-height: 425px;
+
+        padding: 25px 20px;
+
+    }
+
+
+    .question {
+
+        height: 60px;
+
+        min-height: 60px;
+
+        margin-bottom: 22px;
+
+        font-size: 20px;
+
+    }
+
+
+    .answer {
+
+        height: 46px;
+
+        min-height: 46px;
+
+        font-size: 16px;
+
+    }
+
+
+    .quiz-footer {
+
+        height: 75px;
+
+        min-height: 75px;
+
+        padding: 15px 20px;
+
+    }
+
+
+    .question-number {
+
+        font-size: 14px;
+
+    }
+
+
+    .next-btn,
+    .retry-btn {
+
+        padding: 9px 14px;
+
+        font-size: 14px;
+
+    }
+
+}

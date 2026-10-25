@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm – Nike Vapor 16 Elite</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- CSS cho trang chi tiết sản phẩm -->
+    <link rel="stylesheet" href="./CSS/product.css" />
+
+    <!-- CSS chính (navbar, footer, dark mode...) -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!-- =============================================
+         PRODUCT FILTER (tự load từ components.js)
+    ============================================== -->
+    <div id="site-filter"></div>
+
+    <!-- =============================================
+         NAVBAR (tự load từ components.js)
+    ============================================== -->
+    <div id="site-navbar"></div>
+
+    <!-- =============================================
+         CHI TIẾT SẢN PHẨM
+    ============================================== -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- ======== CỘT TRÁI: ẢNH SẢN PHẨM ======== -->
+        <div class="col-md-6">
+          <img
+            src="./images/product.jpg"
+            alt="Nike Mercurial Vapor 16 Elite"
+            class="img-fluid rounded shadow-lg product-img"
+          />
+        </div>
+
+        <!-- ======== CỘT PHẢI: THÔNG TIN SẢN PHẨM ======== -->
+        <div class="col-md-6">
+          <!-- Tên sản phẩm -->
+          <h2 class="product-name">Nike Mercurial Vapor 16 Elite FG</h2>
+
+          <!-- Thương hiệu -->
+          <p class="brand">Thương hiệu: Nike</p>
+
+          <!-- Giá -->
+          <p class="price">Giá: <span>6.790.000đ</span></p>
+
+          <!-- Mô tả ngắn về sản phẩm -->
+          <p class="short-desc">
+            Tối ưu tốc độ với Air Zoom 3/4, upper Flyknit + Gripknit bám bóng
+            siêu ngọt, cùng thiết kế đinh sóng giúp tăng lực bám và phản hồi cực
+            nhanh.
+          </p>
+
+          <!-- ======== THÔNG SỐ KỸ THUẬT ======== -->
+          <ul class="specs list-unstyled">
+            <li><strong>Chất liệu:</strong> Flyknit + Gripknit</li>
+            <li>
+              <strong>Đế giày:</strong> Air Zoom + Stud sóng + Chevron/Blade
+            </li>
+            <li><strong>Loại sân:</strong> FG (Cỏ tự nhiên)</li>
+            <li>
+              <strong>Màu:</strong> Magic Flamingo / Total Crimson / Black
+            </li>
+          </ul>
+
+          <!-- ======== CHỌN SIZE ======== -->
+          <div class="my-3">
+            <label for="sizeSelect" class="form-label">Chọn size:</label>
+            <select id="sizeSelect" class="form-select w-auto d-inline-block">
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+            </select>
+          </div>
+
+          <!-- ======== NÚT HÀNH ĐỘNG ======== -->
+          <div class="btn-group">
+            <!-- Nút "Thêm vào giỏ" → link sang cart.html -->
+            <a href="./cart.html">
+              <button class="btn btn-action">Thêm vào giỏ 🛒</button>
+            </a>
+            <!-- Nút "Mua ngay" → chưa có JS xử lý -->
+            <button class="btn btn-action">Mua ngay</button>
+          </div>
+
+          <!-- Đường kẻ ngang -->
+          <hr class="my-4" />
+
+          <!-- ======== GHI CHÚ ĐẶC BIỆT ======== -->
+          <!--prend> = in nghiêng, dùng để quote/review -->
+          <p class="note">
+            <em>
+              Một trong những Merc mới nhất tối ưu tốc độ – được đánh giá là
+              <strong>"phản hồi nhanh nhất từ trước tới nay"</strong> theo Nike.
+            </em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         FOOTER (tự load từ components.js)
+    ============================================== -->
+    <div id="site-footer"></div>
+
+    <!-- =============================================
+         SCRIPTS
+         - Bootstrap JS (dropdown, collapse, carousel)
+         - components.js (load navbar + footer + filter)
+         - script.js (dark mode, filter, heart buttons)
+    ============================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JS/components.js"></script>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
